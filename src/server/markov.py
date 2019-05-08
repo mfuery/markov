@@ -6,11 +6,6 @@ import requests
 from requests import HTTPError
 
 
-class mydict(dict):
-    def __str__(self):
-        return json.dumps(self)
-
-
 class ProbDist(dict):
     """
     A Probability Distribution; an {outcome: probability} mapping.
@@ -36,7 +31,7 @@ class MarkovStateMachine:
         n_edges = len(counts)
         p_edges = {}
 
-        for k,v in counts.items():
+        for k, v in counts.items():
             p_edges[k] = v / n_edges
 
         return p_edges
@@ -48,7 +43,7 @@ class MarkovStateMachine:
 
 class MarkovChainText:
     @staticmethod
-    def build_chain(text, m_chain=None):
+    def build_chain(text, m_chain=None, start_words=None, end_words=None):
         """
         Normally I would use NumPy tensors or Pandas DataFrames for all the
         heavy lifting. But if I understand the exercise correctly it is to build
@@ -56,8 +51,8 @@ class MarkovChainText:
 
         :return:
         """
-        start_words = set()
-        end_words = set()
+        start_words = set() if start_words is None else start_words
+        end_words = set() if end_words is None else end_words
         m_chain = {} if m_chain is None else m_chain
 
         # Have a special class of words: start words, so we can have a
@@ -108,7 +103,7 @@ class MarkovChainText:
                 pm_chain[word]['next_words'][next_word]['prob'] = \
                     pm_chain[word]['next_words'][next_word]['count'] / metadata['total_count']
 
-        print(mydict(pm_chain), start_words, end_words)
+        # print(mydict(pm_chain), start_words, end_words)
         return pm_chain, start_words, end_words
 
     @staticmethod
@@ -118,15 +113,23 @@ class MarkovChainText:
 
         new_sentence = [word]
         while len(new_sentence) < length:
-            # possible_next_words = k for k, v in m_chain[word]['next_words']
-            next_word = random.choices(
-                list(m_chain[word]['next_words'].keys()),
-                weights=list(m_chain[word]['next_words'].values()))
+            word_choices = list(
+                {
+                    k: k for k, v in m_chain[word]['next_words'].items()
+                }.keys()
+            )
 
-            print(next_word)
+            probs = list(
+                {
+                    k: v['prob'] for k, v in m_chain[word]['next_words'].items()
+                }.values()
+            )
+
+            # Here's the algorithm's entropy...
+            next_word = random.choices(word_choices, weights=probs)[0]
 
             if next_word in end_words:
-                if len(new_sentence) > 3:
+                if len(new_sentence) >= 2:
                     new_sentence.append(next_word)
                     break
                 else:
@@ -135,6 +138,8 @@ class MarkovChainText:
                 new_sentence.append(next_word)
 
             word = next_word
+
+        return ' '.join(new_sentence)
 
 
 def fetch_source_data(api_endpoint_url, count=100):
