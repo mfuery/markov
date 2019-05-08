@@ -1,0 +1,11 @@
+# Development dependencies go here.
+-r base.txt
+-r test.txt
+
+django-debug-toolbar==1.9.1
+
+ipython
+
+pylint
+pylint_common
+pylint_django

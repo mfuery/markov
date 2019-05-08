@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./compose/dev/django/Dockerfile
+    image: dev:latest
+    container_name: dadjokes-django-dev
+    env_file: .env
+    command: /gunicorn.sh
+    ports:
+      - "8000:8000"

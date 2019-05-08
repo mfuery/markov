@@ -1,0 +1,6 @@
+# Production-only dependencies go here.
+# Pro-tip: Try not to put anything here. Avoid dependencies in
+#	production that aren't in development.
+
+-r base.txt
+-r test.txt
