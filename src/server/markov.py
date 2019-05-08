@@ -1,7 +1,14 @@
 import random
+import re
+import json
 
 import requests
 from requests import HTTPError
+
+
+class mydict(dict):
+    def __str__(self):
+        return json.dumps(self)
 
 
 class ProbDist(dict):
@@ -41,7 +48,7 @@ class MarkovStateMachine:
 
 class MarkovChainText:
     @staticmethod
-    def build_chain(text):
+    def build_chain(text, m_chain=None):
         """
         Normally I would use NumPy tensors or Pandas DataFrames for all the
         heavy lifting. But if I understand the exercise correctly it is to build
@@ -51,11 +58,11 @@ class MarkovChainText:
         """
         start_words = set()
         end_words = set()
-        m_chains = {}
+        m_chain = {} if m_chain is None else m_chain
 
         # Have a special class of words: start words, so we can have a
         # better chance of the joke sounding "natural".
-        words = text.split(r'\s+')
+        words = re.split(r"\s+", text)
         start_words.add(words[0])
 
         # Count all of the words.
@@ -63,21 +70,28 @@ class MarkovChainText:
             word = words[i]
             next_word = words[i + 1]
 
-            if word not in m_chains:
-                m_chains[word] = {
+            if word not in m_chain:
+                m_chain[word] = {
                     'next_words': {
-                        next_word: 1
+                        next_word: {
+                            'count': 1,
+                            'prob': None
+                        }
                     },
                     'total_count': 1
                 }
-            if next_word not in m_chains[word]['next_words']:
-                m_chains[word]['next_words'][next_word] = 1
+            if next_word not in m_chain[word]['next_words']:
+                m_chain[word]['next_words'][next_word] = {
+                    'count': 1,
+                    'prob': None
+                }
             else:
-                m_chains[word]['next_words'][next_word] += 1
+                m_chain[word]['next_words'][next_word]['count'] += 1
 
-            m_chains[word]['total_count'] += 1
+            m_chain[word]['total_count'] += 1
 
-        end_words.add(words[-1])
+            if word[-1] in ['.', '!', '?'] and word != '.':
+                start_words.add(next_word)
 
         # Find words that end a sentence for the converse reason we track
         # start words.
@@ -85,23 +99,31 @@ class MarkovChainText:
             if word[-1] in ['.', '!', '?'] and word != '.':
                 end_words.add(word)
 
-        # Convert counts to probabilities.
-        for word in m_chains:
-            for next_word in word['next_words']:
-                word['next_words'][next_word] /= word['total_count']
+        pm_chain = dict(m_chain)
 
-        return m_chains, start_words, end_words
+        # print(json.dumps(m_chains, indent=4))
+        # Calculate next_words probability.
+        for word, metadata in m_chain.items():
+            for next_word, count in metadata['next_words'].items():
+                pm_chain[word]['next_words'][next_word]['prob'] = \
+                    pm_chain[word]['next_words'][next_word]['count'] / metadata['total_count']
+
+        print(mydict(pm_chain), start_words, end_words)
+        return pm_chain, start_words, end_words
 
     @staticmethod
     def generate_sentence(m_chain, start_words, end_words, start_word=None, word_length=None):
-        word = start_word if start_word else random.choice(start_words)
+        word = start_word if start_word else random.choice(list(start_words))
         length = word_length if word_length else random.randrange(10, 30)
 
         new_sentence = [word]
         while len(new_sentence) < length:
+            # possible_next_words = k for k, v in m_chain[word]['next_words']
             next_word = random.choices(
-                m_chain[word]['next_words'].keys(),
-                weights=m_chain[word]['next_words'].values())
+                list(m_chain[word]['next_words'].keys()),
+                weights=list(m_chain[word]['next_words'].values()))
+
+            print(next_word)
 
             if next_word in end_words:
                 if len(new_sentence) > 3:

@@ -1,2 +1,2 @@
 # Automated test suite requirements go here.
-pytest
+pytest==4.4.2
