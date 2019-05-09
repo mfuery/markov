@@ -1,4 +1,4 @@
-from .markov import MarkovChainText, fetch_source_data
+from .markov import MarkovChainText
 import json
 
 

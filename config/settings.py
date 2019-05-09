@@ -41,6 +41,7 @@ CACHES = {
 # Application definition
 
 INSTALLED_APPS = [
+    'server',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -155,8 +156,3 @@ WEBPACK_LOADER = {
         'IGNORE': ['.+\.hot-update.js', '.+\.map']
     }
 }
-
-
-# API data sources
-I_CAN_HAZ_DAD_JOKES_API_URL = "https://icanhazdadjoke.com/search"
-MAX_JOKE_REQUEST_SIZE = 30
