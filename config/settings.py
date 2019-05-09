@@ -137,7 +137,12 @@ LOGGING = {
     'loggers': {
         '': {
             'handlers': ['console', ],
-            'level': env('DJANGO_LOG_LEVEL', default='WARNING'),
+            'level': env('LOG_LEVEL'),
+            'propagate': False,
+        },
+        'django': {
+            'handlers': ['console', ],
+            'level': env('DJANGO_FRAMEWORK_LOG_LEVEL', default='WARNING'),
             'propagate': False,
         },
     },

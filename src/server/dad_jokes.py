@@ -12,10 +12,12 @@ def fetch_jokes(api_endpoint_url, count=100, current_page=1):
 
     n_requests = math.floor(count / MAX_JOKE_REQUEST_SIZE)
     n_requests += 1 if count % MAX_JOKE_REQUEST_SIZE > 0 else 0
-    print(n_requests)
+    # print(f'nreq {n_requests}')
 
     for i in range(n_requests):
-        limit = count % MAX_JOKE_REQUEST_SIZE if i == n_requests else MAX_JOKE_REQUEST_SIZE
+        limit = count % MAX_JOKE_REQUEST_SIZE if i == n_requests-1 else MAX_JOKE_REQUEST_SIZE
+
+        # print(f'limit {limit}')
         try:
             response = requests.get(
                 url=api_endpoint_url,
@@ -33,5 +35,9 @@ def fetch_jokes(api_endpoint_url, count=100, current_page=1):
         else:
             results.append(response.json())
             current_page += 1
+            if len(response.json()['results']) == 0:
+                print('No more results to fetch!')
+                break
+            # print(response.json())
 
     return results
