@@ -17,7 +17,7 @@ def fetch_jokes(api_endpoint_url, count=100, current_page=1):
     for i in range(n_requests):
         limit = count % MAX_JOKE_REQUEST_SIZE if i == n_requests-1 else MAX_JOKE_REQUEST_SIZE
 
-        # print(f'limit {limit}')
+        print(f'Fetching next {limit} dad jokes... Page={current_page}')
         try:
             response = requests.get(
                 url=api_endpoint_url,

@@ -44,6 +44,17 @@ mkvirtualenv dadjokes
 pip install -r requirements/dev.txt
 ```
 
+### Local Server
+Data sources are data driven (hear an echo?). So load the initial data into the database:
+```
+./manage.py loaddata database.json
+```
+
+This serves the django app locally.
+```shell
+./manage.py runserver
+```
+
 ### Database
 
 Dev environment is currently set up to use SQLite by default.
@@ -51,12 +62,7 @@ Dev environment is currently set up to use SQLite by default.
 Migrate the database.
 ```bash
 ./manage.py migrate
-```
 
-### Local Server
-Open another terminal and run the following. This serves the django app locally.
-```shell
-./manage.py runserver
 ```
 
 ### Webpack and React.js 
@@ -70,4 +76,4 @@ Next Steps
 ----------
 
 - Convert Markov Chain build step to use matrices.
-- Parallelize the Markov Chain build process to use multiple threads simultaneously.
+- Parallelize the Markov Chain build process to use multiple threads.

@@ -7,10 +7,10 @@ from server.markov import MarkovChainText
 from server.models import DataSource, TrainingSet, DataDomain
 
 
+# This is for debugging.
 class mydict(dict):
     def __str__(self):
         return json.dumps(self)
-
 
 
 class Command(BaseCommand):
@@ -57,10 +57,11 @@ class Command(BaseCommand):
         # Build chain.
         m_chain, start_words, end_words = MarkovChainText.build_chain(book)
 
-        print(mydict(m_chain), start_words, end_words)
+        # print(mydict(m_chain), start_words, end_words)
 
+        print(f"\nHere are some generated sentences:\n")
         sentences = []
-        for i in range(10):
+        for i in range(20):
             sentence = MarkovChainText.generate_sentence(m_chain, start_words, end_words)
             sentences.append(sentence)
             print(sentence)
