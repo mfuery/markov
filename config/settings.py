@@ -112,6 +112,37 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'root': {
+        'level': env('LOG_LEVEL'),
+    },
+    'formatters': {
+        'default': {
+            'format': env(
+                'LOG_FORMAT',
+                default='[%(asctime)s][%(filename)s(%(lineno)d)]'
+                        '[%(levelname)s] %(name)s: %(message)s')
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': env('LOG_LEVEL'),
+            'class': 'logging.StreamHandler',
+            'formatter': 'default',
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console', ],
+            'level': env('DJANGO_LOG_LEVEL', default='WARNING'),
+            'propagate': False,
+        },
+    },
+}
+
+
 # Webpack
 # ------------------------------------------------------------------------------
 WEBPACK_LOADER = {
@@ -124,3 +155,8 @@ WEBPACK_LOADER = {
         'IGNORE': ['.+\.hot-update.js', '.+\.map']
     }
 }
+
+
+# API data sources
+I_CAN_HAZ_DAD_JOKES_API_URL = "https://icanhazdadjoke.com/search"
+MAX_JOKE_REQUEST_SIZE = 30

@@ -1,4 +1,4 @@
-from .markov import MarkovChainText
+from .markov import MarkovChainText, fetch_source_data
 import json
 
 
@@ -14,6 +14,9 @@ test_sentences = [
 
     "I was fired from the keyboard factory yesterday. I wasn't putting in "
     "enough shifts.",
+
+    "It doesn't matter how much you push the envelope. It will still be "
+    "stationary."
 ]
 
 
@@ -634,9 +637,4 @@ def test_generate_sentence():
         end_words
     )
     print(actual)
-    assert len(actual) > 2
-
-
-def test_fetch_source_data():
-    """Todo"""
-    pass
+    assert len(actual) > 1

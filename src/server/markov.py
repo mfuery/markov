@@ -88,6 +88,9 @@ class MarkovChainText:
             if word[-1] in ['.', '!', '?'] and word != '.':
                 start_words.add(next_word)
 
+        # Last word in the joke must be an end word.
+        end_words.add(words[-1])
+
         # Find words that end a sentence for the converse reason we track
         # start words.
         for word in words:
@@ -97,7 +100,7 @@ class MarkovChainText:
         pm_chain = dict(m_chain)
 
         # print(json.dumps(m_chains, indent=4))
-        # Calculate next_words probability.
+        # Calculate next_words probabilities.
         for word, metadata in m_chain.items():
             for next_word, count in metadata['next_words'].items():
                 pm_chain[word]['next_words'][next_word]['prob'] = \
@@ -125,11 +128,12 @@ class MarkovChainText:
                 }.values()
             )
 
-            # Here's the algorithm's entropy...
+            # Let's add that entropy!
             next_word = random.choices(word_choices, weights=probs)[0]
 
             if next_word in end_words:
-                if len(new_sentence) >= 2:
+                # Allow 2 word sentences, like "I am."
+                if len(new_sentence) > 0:
                     new_sentence.append(next_word)
                     break
                 else:
@@ -156,3 +160,9 @@ def fetch_source_data(api_endpoint_url, count=100):
             sentences.append(response.text)
 
     return sentences
+
+
+def build_chains(sentences, m_chain=None, start_words=None, end_words=None):
+    sentences_text = ' '.join(sentences)
+    return MarkovChainText.build_chain(
+        sentences_text, m_chain, start_words, end_words)

@@ -65,3 +65,9 @@ Install dependencies and start the webpack/React dev server.
 cd src/frontend/
 npm start
 ```
+
+Next Steps
+----------
+
+- Convert Markov Chain build step to use matrices.
+- Parallelize the Markov Chain build process to use multiple threads simultaneously.
