@@ -44,17 +44,6 @@ mkvirtualenv dadjokes
 pip install -r requirements/dev.txt
 ```
 
-### Local Server
-Data sources are data driven (hear an echo?). So load the initial data into the database:
-```
-./manage.py loaddata database.json
-```
-
-This serves the django app locally.
-```shell
-./manage.py runserver
-```
-
 ### Database
 
 Dev environment is currently set up to use SQLite by default.
@@ -64,6 +53,27 @@ Migrate the database.
 ./manage.py migrate
 
 ```
+
+Data sources are data driven (hear an echo?). So load the initial data into the database:
+```
+./manage.py loaddata database.json
+```
+
+### Local Server
+
+This serves the django app locally.
+```shell
+./manage.py runserver
+```
+
+## Command-line Test
+Run this to test out the API download, Markov Chain, and joke generation, all at once. 
+
+
+```bash
+./manage.py fetch_jokes 1000
+```
+
 
 ### Webpack and React.js 
 Install dependencies and start the webpack/React dev server.
