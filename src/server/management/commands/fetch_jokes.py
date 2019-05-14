@@ -3,7 +3,7 @@ import json
 from django.core.management.base import BaseCommand
 
 from server import dad_jokes
-from server.markov import MarkovChainText
+from server.markov import MarkovChain
 from server.models import DataSource, TrainingSet, DataDomain
 
 
@@ -55,13 +55,13 @@ class Command(BaseCommand):
         book = ' '.join(jokes)
 
         # Build chain.
-        m_chain, start_words, end_words = MarkovChainText.build_chain(book)
+        m_chain, start_words, end_words = MarkovChain.train(book)
 
         # print(mydict(m_chain), start_words, end_words)
 
         print(f"\nHere are some generated sentences:\n")
         sentences = []
         for i in range(20):
-            sentence = MarkovChainText.generate_sentence(m_chain, start_words, end_words)
+            sentence = MarkovChain.generate_sentence(m_chain, start_words, end_words)
             sentences.append(sentence)
             print(sentence)

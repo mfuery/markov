@@ -42,3 +42,30 @@ class MarkovChainWord(models.Model):
     word = models.CharField(max_length=255, blank=False)
     next_word = models.CharField(max_length=255, blank=False)
     weight = models.FloatField(blank=False)
+
+    class Meta:
+        unique_together = ('domain', 'word', 'next_word',)
+
+    # def recalculate_weights(self, domain=None):
+    #     pass
+    #
+    # def save_chain(self, m_chain):
+    #     for word in m_chain:
+    #
+    #
+    #     try:
+    #         MarkovChainWord.objects.create(
+    #             domain
+    #         )
+    #     except models.AlreadyExists:
+    #         pass
+    #
+    # def load_chain(self):
+    #     chain = {}
+    #     return chain
+
+
+# class StartWords(models.Model):
+#
+# class EndWords(models.Model):
+#

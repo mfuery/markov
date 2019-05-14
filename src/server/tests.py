@@ -1,4 +1,4 @@
-from .markov import MarkovChainText
+from .markov import MarkovChain, FitnessFn
 import json
 
 
@@ -21,25 +21,25 @@ test_sentences = [
 
 
 def test_build_chain():
-    m_chain, start_words, end_words = MarkovChainText.build_chain(
-        test_sentences[0])
+    m_chain, start_words, end_words = MarkovChain.train(test_sentences[0])
+    # print(mydict(m_chain))
     assert m_chain == {
-        "I": {
+        "i": {
             "next_words": {
                 "finally": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 0.4
                 },
                 "opened": {
-                    "count": 1,
+                    "weight": 1,
                     "prob": 0.2
                 },
                 "have": {
-                    "count": 1,
+                    "weight": 1,
                     "prob": 0.2
                 },
                 "am.": {
-                    "count": 1,
+                    "weight": 1,
                     "prob": 0.2
                 }
             },
@@ -48,7 +48,7 @@ def test_build_chain():
         "finally": {
             "next_words": {
                 "bought": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -57,7 +57,7 @@ def test_build_chain():
         "bought": {
             "next_words": {
                 "the": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -66,11 +66,11 @@ def test_build_chain():
         "the": {
             "next_words": {
                 "limited": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 0.6666666666666666
                 },
                 "pages": {
-                    "count": 1,
+                    "weight": 1,
                     "prob": 0.3333333333333333
                 }
             },
@@ -79,7 +79,7 @@ def test_build_chain():
         "limited": {
             "next_words": {
                 "edition": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -87,17 +87,17 @@ def test_build_chain():
         },
         "edition": {
             "next_words": {
-                "Thesaurus": {
-                    "count": 2,
+                "thesaurus": {
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
             "total_count": 2
         },
-        "Thesaurus": {
+        "thesaurus": {
             "next_words": {
                 "that": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -105,17 +105,17 @@ def test_build_chain():
         },
         "that": {
             "next_words": {
-                "I've": {
-                    "count": 2,
+                "i've": {
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
             "total_count": 2
         },
-        "I've": {
+        "i've": {
             "next_words": {
                 "always": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -124,7 +124,7 @@ def test_build_chain():
         "always": {
             "next_words": {
                 "wanted.": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -132,17 +132,17 @@ def test_build_chain():
         },
         "wanted.": {
             "next_words": {
-                "When": {
-                    "count": 2,
+                "when": {
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
             "total_count": 2
         },
-        "When": {
+        "when": {
             "next_words": {
-                "I": {
-                    "count": 2,
+                "i": {
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -151,7 +151,7 @@ def test_build_chain():
         "opened": {
             "next_words": {
                 "it,": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -160,7 +160,7 @@ def test_build_chain():
         "it,": {
             "next_words": {
                 "all": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -169,7 +169,7 @@ def test_build_chain():
         "all": {
             "next_words": {
                 "the": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -178,7 +178,7 @@ def test_build_chain():
         "pages": {
             "next_words": {
                 "were": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -187,7 +187,7 @@ def test_build_chain():
         "were": {
             "next_words": {
                 "blank.": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -195,8 +195,8 @@ def test_build_chain():
         },
         "blank.": {
             "next_words": {
-                "I": {
-                    "count": 2,
+                "i": {
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -205,7 +205,7 @@ def test_build_chain():
         "have": {
             "next_words": {
                 "no": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -214,7 +214,7 @@ def test_build_chain():
         "no": {
             "next_words": {
                 "words": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -223,7 +223,7 @@ def test_build_chain():
         "words": {
             "next_words": {
                 "to": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -232,7 +232,7 @@ def test_build_chain():
         "to": {
             "next_words": {
                 "describe": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -241,7 +241,7 @@ def test_build_chain():
         "describe": {
             "next_words": {
                 "how": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -250,7 +250,7 @@ def test_build_chain():
         "how": {
             "next_words": {
                 "angry": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -258,51 +258,57 @@ def test_build_chain():
         },
         "angry": {
             "next_words": {
-                "I": {
-                    "count": 2,
+                "i": {
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
             "total_count": 2
         }
     }
-    assert start_words == {'When', 'I'}
-    assert end_words == {'blank.', 'am.', 'wanted.'}
+    assert start_words == {
+        'i',
+        'when'
+    }
+    assert end_words == {
+        'wanted.',
+        'blank.',
+        'am.'
+    }
 
 
 def test_build_chain_run_two_times():
-    m_chain, start_words, end_words = MarkovChainText.build_chain(
+    m_chain, start_words, end_words = MarkovChain.train(
         test_sentences[0])
-    m_chain, start_words, end_words = MarkovChainText.build_chain(
+    m_chain, start_words, end_words = MarkovChain.train(
         test_sentences[1], m_chain, start_words, end_words)
-
     print(mydict(m_chain), start_words, end_words)
 
     assert m_chain == {
-        "I": {
+        "i": {
             "next_words": {
                 "finally": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 0.2857142857142857
                 },
                 "opened": {
-                    "count": 1,
+                    "weight": 1,
                     "prob": 0.14285714285714285
                 },
                 "have": {
-                    "count": 1,
+                    "weight": 1,
                     "prob": 0.14285714285714285
                 },
                 "am.": {
-                    "count": 1,
+                    "weight": 1,
                     "prob": 0.14285714285714285
                 },
                 "was": {
-                    "count": 1,
+                    "weight": 1,
                     "prob": 0.14285714285714285
                 },
                 "wasn't": {
-                    "count": 1,
+                    "weight": 1,
                     "prob": 0.14285714285714285
                 }
             },
@@ -311,7 +317,7 @@ def test_build_chain_run_two_times():
         "finally": {
             "next_words": {
                 "bought": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -320,7 +326,7 @@ def test_build_chain_run_two_times():
         "bought": {
             "next_words": {
                 "the": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -329,15 +335,15 @@ def test_build_chain_run_two_times():
         "the": {
             "next_words": {
                 "limited": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 0.5
                 },
                 "pages": {
-                    "count": 1,
+                    "weight": 1,
                     "prob": 0.25
                 },
                 "keyboard": {
-                    "count": 1,
+                    "weight": 1,
                     "prob": 0.25
                 }
             },
@@ -346,7 +352,7 @@ def test_build_chain_run_two_times():
         "limited": {
             "next_words": {
                 "edition": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -354,17 +360,17 @@ def test_build_chain_run_two_times():
         },
         "edition": {
             "next_words": {
-                "Thesaurus": {
-                    "count": 2,
+                "thesaurus": {
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
             "total_count": 2
         },
-        "Thesaurus": {
+        "thesaurus": {
             "next_words": {
                 "that": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -372,17 +378,17 @@ def test_build_chain_run_two_times():
         },
         "that": {
             "next_words": {
-                "I've": {
-                    "count": 2,
+                "i've": {
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
             "total_count": 2
         },
-        "I've": {
+        "i've": {
             "next_words": {
                 "always": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -391,7 +397,7 @@ def test_build_chain_run_two_times():
         "always": {
             "next_words": {
                 "wanted.": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -399,17 +405,17 @@ def test_build_chain_run_two_times():
         },
         "wanted.": {
             "next_words": {
-                "When": {
-                    "count": 2,
+                "when": {
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
             "total_count": 2
         },
-        "When": {
+        "when": {
             "next_words": {
-                "I": {
-                    "count": 2,
+                "i": {
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -418,7 +424,7 @@ def test_build_chain_run_two_times():
         "opened": {
             "next_words": {
                 "it,": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -427,7 +433,7 @@ def test_build_chain_run_two_times():
         "it,": {
             "next_words": {
                 "all": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -436,7 +442,7 @@ def test_build_chain_run_two_times():
         "all": {
             "next_words": {
                 "the": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -445,7 +451,7 @@ def test_build_chain_run_two_times():
         "pages": {
             "next_words": {
                 "were": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -454,7 +460,7 @@ def test_build_chain_run_two_times():
         "were": {
             "next_words": {
                 "blank.": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -462,8 +468,8 @@ def test_build_chain_run_two_times():
         },
         "blank.": {
             "next_words": {
-                "I": {
-                    "count": 2,
+                "i": {
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -472,7 +478,7 @@ def test_build_chain_run_two_times():
         "have": {
             "next_words": {
                 "no": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -481,7 +487,7 @@ def test_build_chain_run_two_times():
         "no": {
             "next_words": {
                 "words": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -490,7 +496,7 @@ def test_build_chain_run_two_times():
         "words": {
             "next_words": {
                 "to": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -499,7 +505,7 @@ def test_build_chain_run_two_times():
         "to": {
             "next_words": {
                 "describe": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -508,7 +514,7 @@ def test_build_chain_run_two_times():
         "describe": {
             "next_words": {
                 "how": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -517,7 +523,7 @@ def test_build_chain_run_two_times():
         "how": {
             "next_words": {
                 "angry": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -525,8 +531,8 @@ def test_build_chain_run_two_times():
         },
         "angry": {
             "next_words": {
-                "I": {
-                    "count": 2,
+                "i": {
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -535,7 +541,7 @@ def test_build_chain_run_two_times():
         "was": {
             "next_words": {
                 "fired": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -544,7 +550,7 @@ def test_build_chain_run_two_times():
         "fired": {
             "next_words": {
                 "from": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -553,7 +559,7 @@ def test_build_chain_run_two_times():
         "from": {
             "next_words": {
                 "the": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -562,7 +568,7 @@ def test_build_chain_run_two_times():
         "keyboard": {
             "next_words": {
                 "factory": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -571,7 +577,7 @@ def test_build_chain_run_two_times():
         "factory": {
             "next_words": {
                 "yesterday.": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -579,8 +585,8 @@ def test_build_chain_run_two_times():
         },
         "yesterday.": {
             "next_words": {
-                "I": {
-                    "count": 2,
+                "i": {
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -589,7 +595,7 @@ def test_build_chain_run_two_times():
         "wasn't": {
             "next_words": {
                 "putting": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -598,7 +604,7 @@ def test_build_chain_run_two_times():
         "putting": {
             "next_words": {
                 "in": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -607,7 +613,7 @@ def test_build_chain_run_two_times():
         "in": {
             "next_words": {
                 "enough": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -616,7 +622,7 @@ def test_build_chain_run_two_times():
         "enough": {
             "next_words": {
                 "shifts.": {
-                    "count": 2,
+                    "weight": 2,
                     "prob": 1.0
                 }
             },
@@ -624,17 +630,52 @@ def test_build_chain_run_two_times():
         }
     }
 
-    assert start_words == {'When', 'I'}
-    assert end_words == {'am.', 'blank.', 'yesterday.', 'shifts.', 'wanted.'}
+    assert start_words == {
+        'i',
+        'when'
+    }
+    assert end_words == {
+        'wanted.',
+        'yesterday.',
+        'shifts.',
+        'blank.',
+        'am.'
+    }
 
 
 def test_generate_sentence():
-    m_chain, start_words, end_words = MarkovChainText.build_chain(
+    m_chain, start_words, end_words = MarkovChain.train(
         test_sentences[0])
-    actual = MarkovChainText.generate_sentence(
+    actual = MarkovChain.generate_sentence(
         m_chain,
         start_words,
         end_words
     )
     print(actual)
     assert len(actual) > 1
+
+
+def test_apply_fitness():
+    m_chain = {
+        "finally": {
+            "next_words": {
+                "bought": {
+                    "weight": 1,
+                    "prob": 1.0
+                },
+            },
+            "total_count": 1
+        },
+    }
+
+    assert MarkovChain.apply_fitness(m_chain, f=lambda a, b: a) == {
+        "finally": {
+            "next_words": {
+                "bought": {
+                    "weight": 2,
+                    "prob": 1.0
+                },
+            },
+            "total_count": 1
+        },
+    }
