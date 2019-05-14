@@ -85,5 +85,6 @@ npm start
 Next Steps
 ----------
 
+- Train the Markov model using fitness functions.
 - Convert Markov Chain build step to use matrices.
 - Parallelize the Markov Chain build process to use multiple threads.
