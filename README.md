@@ -3,17 +3,8 @@ Markov Chain Text Generator: Dad Joke Edition
 
 Prompt / Motivation
 ------
+Markov Chain implementation at learning to generate dad jokes using icanhazdadjoke.com
 
-We’d love to give you the opportunity to build a small full stack application.
-
-  We’d like you to build a [Markov chain](https://en.wikipedia.org/wiki/Markov_chain) automated text generator. Our only restriction is that the data source for your application must use the [icanhazdadjoke API](https://icanhazdadjoke.com/api), which has “internet's largest selection of dad jokes”. So think of your application as a new dad joke generator!  
-
-You can use any tools you wish to create your application, including any libraries or languages you find useful, however we would like for you to manually implement the Markov generation logic in the language of your choosing. As you are building out your application consider interesting joke generation and application efficiency as your top priority!
-
-As a stretch goal, we’d like for you to add caching to your application.
-
-When you are ready to submit your test, send us either a .zip of your application in the link below or share a link to a repository. Keep in mind we will be cloning and spinning up your application locally to evaluate it.
- 
 ## Dev Setup
 ### Python Setup
 1. Install Python 3.7:
@@ -88,3 +79,5 @@ Next Steps
 - Train the Markov model using fitness functions.
 - Convert Markov Chain build step to use matrices.
 - Parallelize the Markov Chain build process to use multiple threads.
+- Better caching.
+- More data sources.
