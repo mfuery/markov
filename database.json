@@ -1,501 +1,7898 @@
 [
-  {
-    "model": "server.datasource",
-    "pk": 1,
-    "fields": {
-      "url": "https://icanhazdadjoke.com/search"
-    }
-  },
-  {
-    "model": "server.datadomain",
-    "pk": 1,
-    "fields": {
-      "data_source": 1,
-      "name": "dad_jokes"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 1,
-    "fields": {
-      "app_label": "server",
-      "model": "datadomain"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 2,
-    "fields": {
-      "app_label": "server",
-      "model": "datasource"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 3,
-    "fields": {
-      "app_label": "server",
-      "model": "trainingset"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 4,
-    "fields": {
-      "app_label": "server",
-      "model": "markovchainword"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 5,
-    "fields": {
-      "app_label": "server",
-      "model": "generatedsentence"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 6,
-    "fields": {
-      "app_label": "admin",
-      "model": "logentry"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 7,
-    "fields": {
-      "app_label": "auth",
-      "model": "permission"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 8,
-    "fields": {
-      "app_label": "auth",
-      "model": "group"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 9,
-    "fields": {
-      "app_label": "auth",
-      "model": "user"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 10,
-    "fields": {
-      "app_label": "contenttypes",
-      "model": "contenttype"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 11,
-    "fields": {
-      "app_label": "sessions",
-      "model": "session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 1,
-    "fields": {
-      "name": "Can add data domain",
-      "content_type": 1,
-      "codename": "add_datadomain"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 2,
-    "fields": {
-      "name": "Can change data domain",
-      "content_type": 1,
-      "codename": "change_datadomain"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 3,
-    "fields": {
-      "name": "Can delete data domain",
-      "content_type": 1,
-      "codename": "delete_datadomain"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 4,
-    "fields": {
-      "name": "Can view data domain",
-      "content_type": 1,
-      "codename": "view_datadomain"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 5,
-    "fields": {
-      "name": "Can add data source",
-      "content_type": 2,
-      "codename": "add_datasource"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 6,
-    "fields": {
-      "name": "Can change data source",
-      "content_type": 2,
-      "codename": "change_datasource"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 7,
-    "fields": {
-      "name": "Can delete data source",
-      "content_type": 2,
-      "codename": "delete_datasource"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 8,
-    "fields": {
-      "name": "Can view data source",
-      "content_type": 2,
-      "codename": "view_datasource"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 9,
-    "fields": {
-      "name": "Can add training set",
-      "content_type": 3,
-      "codename": "add_trainingset"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 10,
-    "fields": {
-      "name": "Can change training set",
-      "content_type": 3,
-      "codename": "change_trainingset"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 11,
-    "fields": {
-      "name": "Can delete training set",
-      "content_type": 3,
-      "codename": "delete_trainingset"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 12,
-    "fields": {
-      "name": "Can view training set",
-      "content_type": 3,
-      "codename": "view_trainingset"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 13,
-    "fields": {
-      "name": "Can add markov chain word",
-      "content_type": 4,
-      "codename": "add_markovchainword"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 14,
-    "fields": {
-      "name": "Can change markov chain word",
-      "content_type": 4,
-      "codename": "change_markovchainword"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 15,
-    "fields": {
-      "name": "Can delete markov chain word",
-      "content_type": 4,
-      "codename": "delete_markovchainword"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 16,
-    "fields": {
-      "name": "Can view markov chain word",
-      "content_type": 4,
-      "codename": "view_markovchainword"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 17,
-    "fields": {
-      "name": "Can add generated sentence",
-      "content_type": 5,
-      "codename": "add_generatedsentence"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 18,
-    "fields": {
-      "name": "Can change generated sentence",
-      "content_type": 5,
-      "codename": "change_generatedsentence"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 19,
-    "fields": {
-      "name": "Can delete generated sentence",
-      "content_type": 5,
-      "codename": "delete_generatedsentence"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 20,
-    "fields": {
-      "name": "Can view generated sentence",
-      "content_type": 5,
-      "codename": "view_generatedsentence"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 21,
-    "fields": {
-      "name": "Can add log entry",
-      "content_type": 6,
-      "codename": "add_logentry"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 22,
-    "fields": {
-      "name": "Can change log entry",
-      "content_type": 6,
-      "codename": "change_logentry"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 23,
-    "fields": {
-      "name": "Can delete log entry",
-      "content_type": 6,
-      "codename": "delete_logentry"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 24,
-    "fields": {
-      "name": "Can view log entry",
-      "content_type": 6,
-      "codename": "view_logentry"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 25,
-    "fields": {
-      "name": "Can add permission",
-      "content_type": 7,
-      "codename": "add_permission"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 26,
-    "fields": {
-      "name": "Can change permission",
-      "content_type": 7,
-      "codename": "change_permission"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 27,
-    "fields": {
-      "name": "Can delete permission",
-      "content_type": 7,
-      "codename": "delete_permission"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 28,
-    "fields": {
-      "name": "Can view permission",
-      "content_type": 7,
-      "codename": "view_permission"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 29,
-    "fields": {
-      "name": "Can add group",
-      "content_type": 8,
-      "codename": "add_group"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 30,
-    "fields": {
-      "name": "Can change group",
-      "content_type": 8,
-      "codename": "change_group"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 31,
-    "fields": {
-      "name": "Can delete group",
-      "content_type": 8,
-      "codename": "delete_group"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 32,
-    "fields": {
-      "name": "Can view group",
-      "content_type": 8,
-      "codename": "view_group"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 33,
-    "fields": {
-      "name": "Can add user",
-      "content_type": 9,
-      "codename": "add_user"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 34,
-    "fields": {
-      "name": "Can change user",
-      "content_type": 9,
-      "codename": "change_user"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 35,
-    "fields": {
-      "name": "Can delete user",
-      "content_type": 9,
-      "codename": "delete_user"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 36,
-    "fields": {
-      "name": "Can view user",
-      "content_type": 9,
-      "codename": "view_user"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 37,
-    "fields": {
-      "name": "Can add content type",
-      "content_type": 10,
-      "codename": "add_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 38,
-    "fields": {
-      "name": "Can change content type",
-      "content_type": 10,
-      "codename": "change_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 39,
-    "fields": {
-      "name": "Can delete content type",
-      "content_type": 10,
-      "codename": "delete_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 40,
-    "fields": {
-      "name": "Can view content type",
-      "content_type": 10,
-      "codename": "view_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 41,
-    "fields": {
-      "name": "Can add session",
-      "content_type": 11,
-      "codename": "add_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 42,
-    "fields": {
-      "name": "Can change session",
-      "content_type": 11,
-      "codename": "change_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 43,
-    "fields": {
-      "name": "Can delete session",
-      "content_type": 11,
-      "codename": "delete_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 44,
-    "fields": {
-      "name": "Can view session",
-      "content_type": 11,
-      "codename": "view_session"
-    }
+{
+  "model": "server.datasource",
+  "pk": 1,
+  "fields": {
+    "url": "https://icanhazdadjoke.com/search"
   }
+},
+{
+  "model": "server.datasource",
+  "pk": 2,
+  "fields": {
+    "url": "dad jokes manual scrape"
+  }
+},
+{
+  "model": "server.datadomain",
+  "pk": 1,
+  "fields": {
+    "data_source": 1,
+    "name": "dad_jokes"
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 1,
+  "fields": {
+    "uuid": "0189hNRf2g",
+    "content": "I'm tired of following my dreams. I'm just going to ask them where they are going and meet up with them later.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 2,
+  "fields": {
+    "uuid": "08EQZ8EQukb",
+    "content": "Did you hear about the guy whose whole left side was cut off? He's all right now.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 3,
+  "fields": {
+    "uuid": "08xHQCdx5Ed",
+    "content": "Why didn\u2019t the skeleton cross the road? Because he had no guts.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 4,
+  "fields": {
+    "uuid": "0DQKB51oGlb",
+    "content": "What did one nut say as he chased another nut?  I'm a cashew!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 5,
+  "fields": {
+    "uuid": "0LuXvkq4Muc",
+    "content": "I knew I shouldn't steal a mixer from work, but it was a whisk I was willing to take.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 6,
+  "fields": {
+    "uuid": "0ga2EdN7prc",
+    "content": "How come the stadium got hot after the game? Because all of the fans left.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 7,
+  "fields": {
+    "uuid": "0oO71TSv4Ed",
+    "content": "Why was it called the dark ages? Because of all the knights. ",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 8,
+  "fields": {
+    "uuid": "0oz51ozk3ob",
+    "content": "A steak pun is a rare medium well done.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 9,
+  "fields": {
+    "uuid": "0ozAXv4Mmjb",
+    "content": "Why did the tomato blush? Because it saw the salad dressing.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 10,
+  "fields": {
+    "uuid": "0wcFBQfiGBd",
+    "content": "Did you hear the joke about the wandering nun? She was a roman catholic.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 11,
+  "fields": {
+    "uuid": "189xHQ7pOuc",
+    "content": "What creature is smarter than a talking parrot? A spelling bee.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 12,
+  "fields": {
+    "uuid": "18Elj3EIYvc",
+    "content": "I'll tell you what often gets over looked... garden fences.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 13,
+  "fields": {
+    "uuid": "18h3wcU8xAd",
+    "content": "Why did the kid cross the playground? To get to the other slide.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 14,
+  "fields": {
+    "uuid": "1DIRSfx51Dd",
+    "content": "Why do birds fly south for the winter? Because it's too far to walk.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 15,
+  "fields": {
+    "uuid": "1DQZDY0gVnb",
+    "content": "What is a centipedes's favorite Beatle song?  I want to hold your hand, hand, hand, hand...",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 16,
+  "fields": {
+    "uuid": "1DQZvXvX8Ed",
+    "content": "My first time using an elevator was an uplifting experience. The second time let me down.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 17,
+  "fields": {
+    "uuid": "1DQZvcFBdib",
+    "content": "To be Frank, I'd have to change my name.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 18,
+  "fields": {
+    "uuid": "1Dt4M7Ufaxc",
+    "content": "Slept like a log last night \u2026 woke up in the fireplace.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 19,
+  "fields": {
+    "uuid": "1T01LBXLuzd",
+    "content": "Why does a Moon-rock taste better than an Earth-rock? Because it's a little meteor.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 20,
+  "fields": {
+    "uuid": "1T0gqOZT0g",
+    "content": "I thought my wife was joking when she said she'd leave me if I didn't stop signing \"I'm A Believer\"... Then I saw her face.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 21,
+  "fields": {
+    "uuid": "1gyI6EIRKBd",
+    "content": "What do you call two barracuda fish?  A Pairacuda!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 22,
+  "fields": {
+    "uuid": "1oGYLu4T7Ed",
+    "content": "Why is Peter Pan always flying? Because he Neverlands.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 23,
+  "fields": {
+    "uuid": "1oOfFlOfaxc",
+    "content": "What do you do on a remote island? Try and find the TV island it belongs to.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 24,
+  "fields": {
+    "uuid": "1wkqrcNCljb",
+    "content": "Did you know that protons have mass? I didn't even know they were catholic.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 25,
+  "fields": {
+    "uuid": "2118E69prc",
+    "content": "Dad I\u2019m hungry\u2019 \u2026 \u2018Hi hungry I\u2019m dad",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 26,
+  "fields": {
+    "uuid": "218xkq49prc",
+    "content": "I was fired from the keyboard factory yesterday.  I wasn't putting in enough shifts.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 27,
+  "fields": {
+    "uuid": "21DQnbaaxc",
+    "content": "Whoever invented the knock-knock joke should get a no bell prize.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 28,
+  "fields": {
+    "uuid": "29ElG6p49pb",
+    "content": "Wife: Honey I\u2019m pregnant.\r\n\r\nMe: Well\u2026. what do we do now?\r\n\r\nWife: Well, I guess we should go to a baby doctor.\r\n\r\nMe: Hm.. I think I\u2019d be a lot more comfortable going to an adult doctor.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 29,
+  "fields": {
+    "uuid": "2TvX0wX89h",
+    "content": "Why was Pavlov's beard so soft?  Because he conditioned it.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 30,
+  "fields": {
+    "uuid": "2gFIBX82Etc",
+    "content": "Do I enjoy making courthouse puns? Guilty",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 31,
+  "fields": {
+    "uuid": "2gii3LeN7Ed",
+    "content": "Why couldn't the kid see the pirate movie? Because it was rated arrr!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 32,
+  "fields": {
+    "uuid": "2wP711DAdFd",
+    "content": "Man, I really love my furniture... me and my recliner go way back.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 33,
+  "fields": {
+    "uuid": "2wkykjyIYDd",
+    "content": "What did the traffic light say to the car as it passed? \"Don't look I'm changing!\"",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 34,
+  "fields": {
+    "uuid": "39Etc2orc",
+    "content": "Why did the man run around his bed? Because he was trying to catch up on his sleep!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 35,
+  "fields": {
+    "uuid": "3E6MuHtH6h",
+    "content": "What did one wall say to the other wall? I'll meet you at the corner!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 36,
+  "fields": {
+    "uuid": "3E6U8UKmbFd",
+    "content": "Sometimes I tuck my knees into my chest and lean forward.  That\u2019s just how I roll.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 37,
+  "fields": {
+    "uuid": "3El3TCYDYob",
+    "content": "Conjunctivitis.com \u2013 now that\u2019s a site for sore eyes.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 38,
+  "fields": {
+    "uuid": "3LRCIJY82wc",
+    "content": "How many South Americans does it take to change a lightbulb? A Brazilian",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 39,
+  "fields": {
+    "uuid": "3LmyXvsPfqc",
+    "content": "I don't trust stairs. They're always up to something.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 40,
+  "fields": {
+    "uuid": "3oG6UvX82g",
+    "content": "Which is the fastest growing city in the world? Dublin'",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 41,
+  "fields": {
+    "uuid": "3w5wAIRZTnb",
+    "content": "A police officer caught two kids playing with a firework and a car battery. He charged one and let the other one off.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 42,
+  "fields": {
+    "uuid": "41LeN7EImjb",
+    "content": "What is the difference between ignorance and apathy?\r\n\r\nI don't know and I don't care.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 43,
+  "fields": {
+    "uuid": "49xPmW82g",
+    "content": "I went to a Foo Fighters Concert once... It was Everlong...",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 44,
+  "fields": {
+    "uuid": "4EBsPZvP7h",
+    "content": "Some people eat light bulbs. They say it's a nice light snack.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 45,
+  "fields": {
+    "uuid": "4MmjbFlbah",
+    "content": "I cut my finger chopping cheese, but I think that I may have grater problems.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 46,
+  "fields": {
+    "uuid": "4TCAsHJRnjb",
+    "content": "What do you get hanging from Apple trees? Sore arms.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 47,
+  "fields": {
+    "uuid": "4wHB51ws4Ed",
+    "content": "Last night me and my girlfriend watched three DVDs back to back. Luckily I was the one facing the TV.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 48,
+  "fields": {
+    "uuid": "4wciyk3EBAd",
+    "content": "I got a reversible jacket for Christmas, I can't wait to see how it turns out.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 49,
+  "fields": {
+    "uuid": "51DAA5Tfaxc",
+    "content": "What did Romans use to cut pizza before the rolling cutter was invented? Lil Caesars",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 50,
+  "fields": {
+    "uuid": "5M7hF6EItzd",
+    "content": "My pet mouse 'Elvis' died last night. He was caught in a trap..",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 51,
+  "fields": {
+    "uuid": "5T08U8M79pb",
+    "content": "Never take advice from electrons. They are always negative.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 52,
+  "fields": {
+    "uuid": "5TS7pbxcpb",
+    "content": "Why are oranges the smartest fruit? Because they are made to concentrate. ",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 53,
+  "fields": {
+    "uuid": "5h399pWLmyd",
+    "content": "What did the beaver say to the tree? It's been nice gnawing you.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 54,
+  "fields": {
+    "uuid": "5hNJexX8prc",
+    "content": "How do you fix a damaged jack-o-lantern? You use a pumpkin patch.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 55,
+  "fields": {
+    "uuid": "5hVDAAIRKuc",
+    "content": "What did the late tomato say to the early tomato? I\u2019ll ketch up",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 56,
+  "fields": {
+    "uuid": "5hyP79pOCd",
+    "content": "I have kleptomania, but when it gets bad, I take something for it.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 57,
+  "fields": {
+    "uuid": "5oGYLZo4Tvc",
+    "content": "I used to be addicted to soap, but I'm clean now.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 58,
+  "fields": {
+    "uuid": "5oWLeFdxkjb",
+    "content": "When is a door not a door? When it's ajar.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 59,
+  "fields": {
+    "uuid": "5wHexPC5hib",
+    "content": "I made a belt out of watches once... It was a waist of time.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 60,
+  "fields": {
+    "uuid": "6EYLBscN7wc",
+    "content": "This furniture store keeps emailing me, all I wanted was one night stand!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 61,
+  "fields": {
+    "uuid": "6EdFBAsrcpb",
+    "content": "How do you find Will Smith in the snow?  Look for fresh prints.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 62,
+  "fields": {
+    "uuid": "6MZobUfVKuc",
+    "content": "I just read a book about Stockholm syndrome. It was pretty bad at first, but by the end I liked it.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 63,
+  "fields": {
+    "uuid": "6MZor4T79pb",
+    "content": "Why do trees seem suspicious on sunny days? Dunno, they're just a bit shady.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 64,
+  "fields": {
+    "uuid": "6U0DIBAlbxc",
+    "content": "If at first you don't succeed, sky diving is not for you!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 65,
+  "fields": {
+    "uuid": "6hqHJmyPmyd",
+    "content": "What kind of music do mummy's like? Rap",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 66,
+  "fields": {
+    "uuid": "71gF6wHBsrc",
+    "content": "A book just fell on my head. I only have my shelf to blame.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 67,
+  "fields": {
+    "uuid": "71wsPKeF6h",
+    "content": "What did the dog say to the two trees? Bark bark.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 68,
+  "fields": {
+    "uuid": "7MZ0LR7UfFd",
+    "content": "Why can't your nose be 12 inches long? Because then it'd be a foot!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 69,
+  "fields": {
+    "uuid": "7U89MJeFdib",
+    "content": "Have you ever heard of a music group called Cellophane? They mostly wrap.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 70,
+  "fields": {
+    "uuid": "7Ufi31gydFd",
+    "content": "What did the mountain climber name his son? Cliff.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 71,
+  "fields": {
+    "uuid": "7UnjNRfapzd",
+    "content": "Why should you never trust a pig with a secret? Because it's bound to squeal.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 72,
+  "fields": {
+    "uuid": "7Uvc29hFIBd",
+    "content": "Why are mummys scared of vacation? They're afraid to unwind.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 73,
+  "fields": {
+    "uuid": "7h3oGtrOfxc",
+    "content": "Whiteboards ... are remarkable.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 74,
+  "fields": {
+    "uuid": "7hNuz5MeVnb",
+    "content": "What kind of dinosaur loves to sleep? A stega-snore-us.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 75,
+  "fields": {
+    "uuid": "7wciy59MJe",
+    "content": "What\u2019s Forest Gump\u2019s Facebook password? 1forest1",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 76,
+  "fields": {
+    "uuid": "82LBXSfaFlb",
+    "content": "What kind of tree fits in your hand? A palm tree!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 77,
+  "fields": {
+    "uuid": "82TnORSK6wc",
+    "content": "Whenever the cashier at the grocery store asks my dad if he would like the milk in a bag he replies, \u2018No, just leave it in the carton!\u2019",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 78,
+  "fields": {
+    "uuid": "82gqciGBdFd",
+    "content": "I used to be addicted to the hokey pokey, but I turned myself around.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 79,
+  "fields": {
+    "uuid": "82wAAI6pbh",
+    "content": "How many tickles does it take to tickle an octopus? Ten-tickles!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 80,
+  "fields": {
+    "uuid": "82wHlbaapzd",
+    "content": "Me: If humans lose the ability to hear high frequency volumes as they get older, can my 4 week old son hear a dog whistle?\r\n\r\nDoctor: No, humans can never hear that high of a frequency no matter what age they are.\r\n\r\nMe: Trick question... dogs can't whistle.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 81,
+  "fields": {
+    "uuid": "892EImW0Dlb",
+    "content": "What musical instrument is found in the bathroom? A tuba toothpaste.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 82,
+  "fields": {
+    "uuid": "89pzsHtW8pb",
+    "content": "My boss told me to attach two pieces of wood together... I totally nailed it!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 83,
+  "fields": {
+    "uuid": "8U0TClqOZDd",
+    "content": "What was the pumpkin\u2019s favorite sport?\r\n\r\nSquash.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 84,
+  "fields": {
+    "uuid": "8U8EdpWnOuc",
+    "content": "Recent survey revealed 6 out of 7 dwarf's aren't happy.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 85,
+  "fields": {
+    "uuid": "8UDdUnrzkyd",
+    "content": "What do you call corn that joins the army? Kernel.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 86,
+  "fields": {
+    "uuid": "8USSSfVn3ob",
+    "content": "I've been trying to come up with a dad joke about momentum . . . but I just can't seem to get it going.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 87,
+  "fields": {
+    "uuid": "8UnrHe2T0g",
+    "content": "\u2018Put the cat out\u2019 \u2026 \u2018I didn\u2019t realize it was on fire",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 88,
+  "fields": {
+    "uuid": "8hVnbxcp4wc",
+    "content": "Is there a hole in your shoe? No\u2026 Then how\u2019d you get your foot in it?",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 89,
+  "fields": {
+    "uuid": "8p49pWvcxAd",
+    "content": "Every night at 11:11, I make a wish that someone will come fix my broken clock.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 90,
+  "fields": {
+    "uuid": "8pWvzkjN7Ed",
+    "content": "Two muffins were sitting in an oven, and the first looks over to the second, and says, \u201cman, it\u2019s really hot in here\u201d. The second looks over at the first with a surprised look, and answers, \u201cWHOA, a talking muffin!\u201d",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 91,
+  "fields": {
+    "uuid": "8prWvkOf2Ed",
+    "content": "What's the difference between a guitar and a fish? You can tune a guitar but you can't \"tuna\" fish!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 92,
+  "fields": {
+    "uuid": "92oOKusHBd",
+    "content": "Did you hear that the police have a warrant out on a midget psychic ripping people off? It reads \u201cSmall medium at large.\u201d",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 93,
+  "fields": {
+    "uuid": "99MZvHJJtzd",
+    "content": "Why don't sharks eat clowns?  Because they taste funny.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 94,
+  "fields": {
+    "uuid": "99U0T7hVDlb",
+    "content": "Just read a few facts about frogs. They were ribbiting.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 95,
+  "fields": {
+    "uuid": "99UDQZgyIBd",
+    "content": "Two satellites decided to get married. The wedding wasn't much, but the reception was incredible.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 96,
+  "fields": {
+    "uuid": "9Mus4wkqzd",
+    "content": "What do you get if you put a duck in a cement mixer? Quacks in the pavement.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 97,
+  "fields": {
+    "uuid": "9hiGeNZ0Tnb",
+    "content": "They tried to make a diamond shaped like a duck. It quacked under the pressure.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 98,
+  "fields": {
+    "uuid": "9hyAsrzAItc",
+    "content": "Where\u2019s the bin? Dad: I haven\u2019t been anywhere!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 99,
+  "fields": {
+    "uuid": "9prWnjyImyd",
+    "content": "Why do bears have hairy coats? Fur protection.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 100,
+  "fields": {
+    "uuid": "9xA51L6Uvc",
+    "content": "What do you get when you cross a bee and a sheep? A bah-humbug.\r\n",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 101,
+  "fields": {
+    "uuid": "9xPCt411ojb",
+    "content": "What did one snowman say to the other snow man? Do you smell carrot?",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 102,
+  "fields": {
+    "uuid": "A5MCY821gib",
+    "content": "Why do bees hum? Because they don't know the words.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 103,
+  "fields": {
+    "uuid": "A5ozsH6pWnb",
+    "content": "What do you call a troublesome Canadian high schooler? A poutine.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 104,
+  "fields": {
+    "uuid": "AAIYo4MJmrc",
+    "content": "A magician was driving down the street and then he turned into a driveway.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 105,
+  "fields": {
+    "uuid": "AAXnyImyPCd",
+    "content": "Don't trust atoms. They make up everything.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 106,
+  "fields": {
+    "uuid": "AAdFBXnGlyd",
+    "content": "If you walk into a forest and cut down a tree, but the tree doesn't understand why you cut it down, do you think it's stumped?",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 107,
+  "fields": {
+    "uuid": "AI6hiGtzAd",
+    "content": "Where do bees go to the bathroom?  The BP station.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 108,
+  "fields": {
+    "uuid": "AIm3w5hiyd",
+    "content": "Why did the tree go to the dentist? It needed a root canal.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 109,
+  "fields": {
+    "uuid": "AQn3wPKeqrc",
+    "content": "It was raining cats and dogs the other day. I almost stepped in a poodle.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 110,
+  "fields": {
+    "uuid": "AXnrrcNmyAd",
+    "content": "Why do bananas have to put on sunscreen before they go to the beach? Because they might peel!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 111,
+  "fields": {
+    "uuid": "AXvHeVvHeib",
+    "content": "What do you call a bee that lives in America? A USB.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 112,
+  "fields": {
+    "uuid": "Albp49Mmjyd",
+    "content": "I was wondering why the frisbee was getting bigger, then it hit me.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 113,
+  "fields": {
+    "uuid": "As4wsHtzd",
+    "content": "What's the difference between a hippo and a zippo? One is really heavy, the other is a little lighter.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 114,
+  "fields": {
+    "uuid": "B5h311TS7h",
+    "content": "I couldn't figure out how the seat belt worked. Then it just clicked.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 115,
+  "fields": {
+    "uuid": "BAdU0DAlVvc",
+    "content": "What do you call a dad that has fallen through the ice? A Popsicle.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 116,
+  "fields": {
+    "uuid": "BAscNus4ozd",
+    "content": "Two parrots are sitting on a perch. One turns to the other and asks, \"do you smell fish?\"",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 117,
+  "fields": {
+    "uuid": "BI699EY08Ed",
+    "content": "Bad at golf? Join the club.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 118,
+  "fields": {
+    "uuid": "BQfaxsHBsrc",
+    "content": "What do you call a pile of cats?  A Meowtain.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 119,
+  "fields": {
+    "uuid": "BQnyImOCIBd",
+    "content": "How do hens stay fit? They always egg-cercise!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 120,
+  "fields": {
+    "uuid": "BdxHQZ0TCd",
+    "content": "Can a kangaroo jump higher than the Empire State Building? Of course. The Empire State Building can't jump.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 121,
+  "fields": {
+    "uuid": "BsHtcN7hiqc",
+    "content": "What do you give a sick lemon? Lemonaid.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 122,
+  "fields": {
+    "uuid": "C59hNRCdUnb",
+    "content": "What do you call an old snowman? Water.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 123,
+  "fields": {
+    "uuid": "CAlG6MRnWnb",
+    "content": "I just got fired from a florist, apparently I took too many leaves.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 124,
+  "fields": {
+    "uuid": "CIt49pjG6wc",
+    "content": "Why don\u2019t skeletons ever go trick or treating? Because they have nobody to go with.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 125,
+  "fields": {
+    "uuid": "CQSKeaFIBsc",
+    "content": "What does a female snake use for support? A co-Bra!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 126,
+  "fields": {
+    "uuid": "CYvsHtWDAlb",
+    "content": "\"Dad, I'm cold.\"\r\n\"Go stand in the corner, I hear it's 90 degrees.\"",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 127,
+  "fields": {
+    "uuid": "Cd2gFdFQKuc",
+    "content": "Child: Dad, make me a sandwich. Dad: Poof! You're a sandwich.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 128,
+  "fields": {
+    "uuid": "ClGY8xc2EBd",
+    "content": "Why are graveyards so noisy? Because of all the coffin.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 129,
+  "fields": {
+    "uuid": "CtWgqjbMeib",
+    "content": "What kind of bagel can fly? A plain bagel.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 130,
+  "fields": {
+    "uuid": "D5E6USfNmb",
+    "content": "How many apples grow on a tree? All of them!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 131,
+  "fields": {
+    "uuid": "D5wAA5o4TCd",
+    "content": "What do you call a careful wolf? Aware wolf.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 132,
+  "fields": {
+    "uuid": "DAskq4oWSvc",
+    "content": "I was just looking at my ceiling. Not sure if it\u2019s the best ceiling in the world, but it\u2019s definitely up there.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 133,
+  "fields": {
+    "uuid": "DIeFtkVvHlb",
+    "content": "Why do valley girls hang out in odd numbered groups? Because they can't even.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 134,
+  "fields": {
+    "uuid": "DIeaUDlbUDd",
+    "content": "\u201cMy Dog has no nose.\u201d \u201cHow does he smell?\u201d \u201cAwful\u201d",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 135,
+  "fields": {
+    "uuid": "DImrciqWSCd",
+    "content": "What do you call a cow with no legs? Ground beef.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 136,
+  "fields": {
+    "uuid": "DY8UvkqHexc",
+    "content": "Why did the half blind man fall in the well? Because he couldn't see that well!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 137,
+  "fields": {
+    "uuid": "DYLukyIY8Ed",
+    "content": "As I suspected, someone has been adding soil to my garden. The plot thickens.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 138,
+  "fields": {
+    "uuid": "Dt4hNJJmykb",
+    "content": "It\u2019s hard to explain puns to kleptomaniacs, because they take everything literally.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 139,
+  "fields": {
+    "uuid": "DtWSnydN7h",
+    "content": "It's difficult to say what my wife does, she sells sea shells by the sea shore.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 140,
+  "fields": {
+    "uuid": "DtcaMmWDImb",
+    "content": "Why did Dracula lie in the wrong coffin? He made a grave mistake.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 141,
+  "fields": {
+    "uuid": "EBAsPfiNuzd",
+    "content": "What did one plate say to the other plate? Dinner is on me!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 142,
+  "fields": {
+    "uuid": "EBQfiyXD5ob",
+    "content": "what do you call a dog that can do magic tricks? a labracadabrador",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 143,
+  "fields": {
+    "uuid": "EIJmGY8Etrc",
+    "content": "Doctor: Do you want to hear the good news or the bad news?\r\nPatient: Good news please.\r\nDoctor: we're naming a disease after you.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 144,
+  "fields": {
+    "uuid": "EQKZDIeah",
+    "content": "Atheism is a non-prophet organisation.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 145,
+  "fields": {
+    "uuid": "EdpjyXSfNCd",
+    "content": "What do you call a monkey in a mine field? A babooooom!\n",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 146,
+  "fields": {
+    "uuid": "ElbaF6wHlyd",
+    "content": "I cut my finger cutting cheese. I know it may be a cheesy story but I feel grate now.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 147,
+  "fields": {
+    "uuid": "ElyXS0gFBAd",
+    "content": "How do you steal a coat? You jacket.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 148,
+  "fields": {
+    "uuid": "EtzscNuk3Ed",
+    "content": "Why don't you find hippopotamuses hiding in trees?\r\nThey're really good at it.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 149,
+  "fields": {
+    "uuid": "F6wPR71Dtzd",
+    "content": "I\u2019m reading a book on the history of glue \u2013 can\u2019t put it down.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 150,
+  "fields": {
+    "uuid": "FBQ7wskbMmb",
+    "content": "Want to hear a joke about construction? Nah, I'm still working on it.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 151,
+  "fields": {
+    "uuid": "FBskq4MRnrc",
+    "content": "Just watched a documentary about beavers\u2026 It was the best damn program I\u2019ve ever seen.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 152,
+  "fields": {
+    "uuid": "FIY8992wskb",
+    "content": "Why do choirs keep buckets handy? So they can carry their tune",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 153,
+  "fields": {
+    "uuid": "FImyA5EIBAd",
+    "content": "Did you hear about the kidnapping at school? It's ok, he woke up.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 154,
+  "fields": {
+    "uuid": "FYTv41LmbFd",
+    "content": "You will never guess what Elsa did to the balloon. She let it go.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 155,
+  "fields": {
+    "uuid": "FdN7przPCtc",
+    "content": "You can't run through a camp site. You can only ran, because it's past tents.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 156,
+  "fields": {
+    "uuid": "FdN7wcxAskb",
+    "content": "They're making a movie about clocks. It's about time",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 157,
+  "fields": {
+    "uuid": "FdNZTnWvHBd",
+    "content": "I\u2019ve just been reading a book about anti-gravity, it\u2019s impossible to put down!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 158,
+  "fields": {
+    "uuid": "FdxHeiqjqzd",
+    "content": "Archaeology really is a career in ruins.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 159,
+  "fields": {
+    "uuid": "FtHBXvXL6h",
+    "content": "I was going to get a brain transplant, but I changed my mind",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 160,
+  "fields": {
+    "uuid": "G6EtkOZD5h",
+    "content": "Why can't you use \"Beef stew\" as a password? Because it's not stroganoff.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 161,
+  "fields": {
+    "uuid": "GBscNZg3gib",
+    "content": "Why couldn't the lifeguard save the hippie? He was too far out, man.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 162,
+  "fields": {
+    "uuid": "GQuzAAXgah",
+    "content": "Some people say that I never got over my obsession with Phil Collins.\r\nBut take a look at me now.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 163,
+  "fields": {
+    "uuid": "GYDY8xXLmyd",
+    "content": "Why did the girl smear peanut butter on the road? To go with the traffic jam.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 164,
+  "fields": {
+    "uuid": "GeFQZ89h",
+    "content": "The rotation of earth really makes my day.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 165,
+  "fields": {
+    "uuid": "GlGBIY0wAAd",
+    "content": "How much does a hipster weigh? An instagram.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 166,
+  "fields": {
+    "uuid": "GlbxXg3TClb",
+    "content": "A woman is on trial for beating her husband to death with his guitar collection. Judge says, \u2018First offender?\u2019 She says, \u2018No, first a Gibson! Then a Fender!\u2019",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 167,
+  "fields": {
+    "uuid": "GlbxkyPRKuc",
+    "content": "I saw an ad in a shop window, \"Television for sale, $1, volume stuck on full\", I thought, \"I can't turn that down\".",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 168,
+  "fields": {
+    "uuid": "GtH6E6UD5Ed",
+    "content": "What kind of dog lives in a particle accelerator? A Fermilabrador Retriever.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 169,
+  "fields": {
+    "uuid": "H6Elb2LBdxc",
+    "content": "What's blue and not very heavy?  Light blue.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 170,
+  "fields": {
+    "uuid": "HBszX8MJ6h",
+    "content": "I was so proud when I finished the puzzle in six months, when on the side it said three to four years.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 171,
+  "fields": {
+    "uuid": "HJJY0LR7hyd",
+    "content": "Where did you learn to make ice cream? Sunday school.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 172,
+  "fields": {
+    "uuid": "HQfNZDIRSnb",
+    "content": "A quick shoutout to all of the sidewalks out there... Thanks for keeping me off the streets.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 173,
+  "fields": {
+    "uuid": "HQuXvkjqcpb",
+    "content": "Where does Napoleon keep his armies? In his sleevies.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 174,
+  "fields": {
+    "uuid": "HY8xHeiNeFd",
+    "content": "Leather is great for sneaking around because it's made of hide.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 175,
+  "fields": {
+    "uuid": "HYgiVDAscFd",
+    "content": "People are making apocalypse jokes like there\u2019s no tomorrow.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 176,
+  "fields": {
+    "uuid": "HYoGYTvX0g",
+    "content": "What is the tallest building in the world? The library \u2013 it\u2019s got the most stories!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 177,
+  "fields": {
+    "uuid": "HeaFdiyIJe",
+    "content": "What kind of magic do cows believe in? MOODOO.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 178,
+  "fields": {
+    "uuid": "HlbFQ71wkyd",
+    "content": "I just broke my guitar. It's okay, I won't fret",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 179,
+  "fields": {
+    "uuid": "Ht49xX8xXDd",
+    "content": "It's only a murder of crows if there's probable caws.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 180,
+  "fields": {
+    "uuid": "HtcNuHJBQCd",
+    "content": "How many kids with ADD does it take to change a lightbulb? Let's go ride bikes!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 181,
+  "fields": {
+    "uuid": "I6h3ozAIYDd",
+    "content": "Where do hamburgers go to dance? The meat-ball.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 182,
+  "fields": {
+    "uuid": "IJBA51Tvcxc",
+    "content": "Did you know that ghosts call their true love their ghoul-friend?",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 183,
+  "fields": {
+    "uuid": "IJBAsrrzPmb",
+    "content": "What do you call a cow with two legs? Lean beef.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 184,
+  "fields": {
+    "uuid": "IJYvcFIBAlb",
+    "content": "What did the big flower say to the littler flower? Hi, bud!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 185,
+  "fields": {
+    "uuid": "IRKJBQ7p4wc",
+    "content": " I never wanted to believe that my Dad was stealing from his job as a road worker. But when I got home, all the signs were there.\r\n\r\n",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 186,
+  "fields": {
+    "uuid": "IRZDtWSnWDd",
+    "content": "Why do pumpkins sit on people\u2019s porches?\r\n\r\nThey have no hands to knock on the door.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 187,
+  "fields": {
+    "uuid": "IRuX8U8EImb",
+    "content": "Who is the coolest Doctor in the hospital? The hip Doctor!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 188,
+  "fields": {
+    "uuid": "IYT082EQukb",
+    "content": "Why was ten scared of seven? Because seven ate nine.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 189,
+  "fields": {
+    "uuid": "IYgiyIR7hib",
+    "content": "What do you get when you cross a rabbit with a water hose? Hare spray.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 190,
+  "fields": {
+    "uuid": "IeiyIRSnbxc",
+    "content": "I applied to be a doorman but didn't get the job due to lack of experience. That surprised me, I thought it was an entry level position.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 191,
+  "fields": {
+    "uuid": "IexXD5TnGBd",
+    "content": "I knew a guy who collected candy canes, they were all in mint condition",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 192,
+  "fields": {
+    "uuid": "It4Etrjiqrc",
+    "content": "Why does a chicken coop only have two doors? Because if it had four doors it would be a chicken sedan.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 193,
+  "fields": {
+    "uuid": "ItWLR792Ed",
+    "content": "\"I'll call you later.\" Don't call me later, call me Dad.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 194,
+  "fields": {
+    "uuid": "ItWSnbUfVnb",
+    "content": "Why did the teddy bear say \u201cno\u201d to dessert? Because she was stuffed.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 195,
+  "fields": {
+    "uuid": "JBs4T79Edpb",
+    "content": "Breaking news! Energizer Bunny arrested \u2013 charged with battery.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 196,
+  "fields": {
+    "uuid": "JJ61L61Lusc",
+    "content": "How many bones are in the human hand? A handful of them.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 197,
+  "fields": {
+    "uuid": "JeF69xAQSnb",
+    "content": "A red and a blue ship have just collided in the Caribbean. Apparently the survivors are marooned.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 198,
+  "fields": {
+    "uuid": "JeVDI6EBIe",
+    "content": "I've just written a song about a tortilla. Well, it is more of a rap really.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 199,
+  "fields": {
+    "uuid": "JeaxXvkyPf",
+    "content": "Can February march? No, but April may.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 200,
+  "fields": {
+    "uuid": "JmGtkyIJeqc",
+    "content": "So a duck walks into a pharmacy and says \u201cGive me some chap-stick\u2026 and put it on my bill\u201d",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 201,
+  "fields": {
+    "uuid": "JmjbxkGJBAd",
+    "content": "Egyptians claimed to invent the guitar, but they were such lyres.\ufeff",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 202,
+  "fields": {
+    "uuid": "JtcxXS0ozAd",
+    "content": "Toasters were the first form of pop-up notifications.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 203,
+  "fields": {
+    "uuid": "K6UKmykqrjb",
+    "content": "What is a witch's favorite subject in school? Spelling!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 204,
+  "fields": {
+    "uuid": "K6USKBXvcib",
+    "content": "What do you call a crowd of chess players bragging about their wins in a hotel lobby? Chess nuts boasting in an open foyer.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 205,
+  "fields": {
+    "uuid": "K6UvXD5Mexc",
+    "content": "Which side of the chicken has more feathers? The outside.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 206,
+  "fields": {
+    "uuid": "KBsWnO711Dd",
+    "content": "Remember, the best angle to approach a problem from is the \"try\" angle.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 207,
+  "fields": {
+    "uuid": "KBsrz5ws4Ed",
+    "content": "Why are fish easy to weigh? Because they have their own scales.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 208,
+  "fields": {
+    "uuid": "KJJtPuPKJe",
+    "content": "What did the scarf say to the hat? You go on ahead, I am going to hang around a bit longer.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 209,
+  "fields": {
+    "uuid": "KJmW8h3oWnb",
+    "content": "Did you hear about the scientist who was lab partners with a pot of boiling water? He had a very esteemed colleague.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 210,
+  "fields": {
+    "uuid": "KJmrOKeNexc",
+    "content": "This morning I was wondering where the sun was, but then it dawned on me.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 211,
+  "fields": {
+    "uuid": "KZDtkG6pjqc",
+    "content": "Writing with a broken pencil is pointless.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 212,
+  "fields": {
+    "uuid": "KeqOmOZDYDd",
+    "content": "Why is it so windy inside an arena? All those fans.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 213,
+  "fields": {
+    "uuid": "KmW8hFlV0ob",
+    "content": "A panda walks into a bar and says to the bartender \u201cI\u2019ll have a Scotch and . . . . . . . . . . . . . . Coke thank you\u201d. \r\n\r\n\u201cSure thing\u201d the bartender replies and asks \u201cbut what\u2019s with the big pause?\u201d \r\n\r\nThe panda holds up his hands and says \u201cI was born with them\u201d",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 214,
+  "fields": {
+    "uuid": "L6UnyP7Unyd",
+    "content": "\u201cDoctor, I\u2019ve broken my arm in several places\u201d Doctor \u201cWell don\u2019t go to those places.\u201d",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 215,
+  "fields": {
+    "uuid": "LB5wHQSvzAd",
+    "content": "Where was the Declaration of Independence signed?\r\n\r\nAt the bottom! ",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 216,
+  "fields": {
+    "uuid": "LBAQ79MJmb",
+    "content": "What\u2019s the difference between an African elephant and an Indian elephant? About 5000 miles.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 217,
+  "fields": {
+    "uuid": "LBdUvcFB5h",
+    "content": "Two peanuts were walking down the street. One was a salted",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 218,
+  "fields": {
+    "uuid": "LRf2obFBskb",
+    "content": "Don\u2019t interrupt someone working intently on a puzzle. Chances are, you\u2019ll hear some crosswords.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 219,
+  "fields": {
+    "uuid": "LRnGeVfiNe",
+    "content": "Today a man knocked on my door and asked for a small donation towards the local swimming pool. I gave him a glass of water.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 220,
+  "fields": {
+    "uuid": "Lmjqzsr49pb",
+    "content": "What did the Zen Buddist say to the hotdog vendor? Make me one with everything.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 221,
+  "fields": {
+    "uuid": "LuciNmbaMmb",
+    "content": "What did the digital clock say to the grandfather clock? Look, no hands!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 222,
+  "fields": {
+    "uuid": "M7EBXgVSCAd",
+    "content": "A weasel walks into a bar. The bartender says, \"Wow, I've never served a weasel before. What can I get for you?\"\r\n\"Pop,\" goes the weasel.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 223,
+  "fields": {
+    "uuid": "M7ElyAQCAd",
+    "content": "How was the snow globe feeling after the storm? A little shaken.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 224,
+  "fields": {
+    "uuid": "M7wPC5wPKBd",
+    "content": "Did you hear the one about the guy with the broken hearing aid? Neither did he.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 225,
+  "fields": {
+    "uuid": "MCt4wX8pb",
+    "content": "What did the Red light say to the Green light? Don't look at me I'm changing!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 226,
+  "fields": {
+    "uuid": "MJB511wAXvc",
+    "content": "What did the ocean say to the beach? Thanks for all the sediment.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 227,
+  "fields": {
+    "uuid": "MRC5hNCAXg",
+    "content": "What did the left eye say to the right eye? Between us, something smells!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 228,
+  "fields": {
+    "uuid": "MRZ0LJtHQCd",
+    "content": "What do you call a fly without wings? A walk.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 229,
+  "fields": {
+    "uuid": "MZ82EIB5hFd",
+    "content": "Why did the melons plan a big wedding? Because they cantaloupe!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 230,
+  "fields": {
+    "uuid": "MZga2gFlysc",
+    "content": "What is the least spoken language in the world?\r\nSign Language",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 231,
+  "fields": {
+    "uuid": "MZoOCQ7wcpb",
+    "content": "What do birds give out on Halloween? Tweets.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 232,
+  "fields": {
+    "uuid": "MZvsrzXgyd",
+    "content": "I used to think I was indecisive, but now I'm not sure.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 233,
+  "fields": {
+    "uuid": "Me2wAAl31wc",
+    "content": "Velcro\u2026 What a rip-off.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 234,
+  "fields": {
+    "uuid": "MeaFYLBAQuc",
+    "content": "Have you heard the rumor going around about butter? Never mind, I shouldn't spread it.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 235,
+  "fields": {
+    "uuid": "N7pWvcxsHBd",
+    "content": "What happens to a frog's car when it breaks down? It gets toad.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 236,
+  "fields": {
+    "uuid": "NCAIYLeNe",
+    "content": "I fear for the calendar, it\u2019s days are numbered.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 237,
+  "fields": {
+    "uuid": "NCQfqHYgaFd",
+    "content": "I'm glad I know sign language, it's pretty handy.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 238,
+  "fields": {
+    "uuid": "NJBl3TnrHlb",
+    "content": "The other day, my wife asked me to pass her lipstick but I accidentally passed her a glue stick. She still isn't talking to me.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 239,
+  "fields": {
+    "uuid": "NJJ6wH6hNCd",
+    "content": "What do you get when you cross a chicken with a skunk? A fowl smell!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 240,
+  "fields": {
+    "uuid": "NRuHJYgaUDd",
+    "content": "How many hipsters does it take to change a lightbulb? Oh, it's a really obscure number. You've probably never heard of it.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 241,
+  "fields": {
+    "uuid": "NZDlb299Uf",
+    "content": "Where do sheep go to get their hair cut? The baa-baa shop.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 242,
+  "fields": {
+    "uuid": "NmbFtH69hFd",
+    "content": "Our wedding was so beautiful, even the cake was in tiers.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 243,
+  "fields": {
+    "uuid": "NucUfVvXLBd",
+    "content": "What did the hat say to the scarf?\r\nYou can hang around. I'll just go on ahead.\r\n",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 244,
+  "fields": {
+    "uuid": "O7haxA5Tfxc",
+    "content": "Where do cats write notes?\r\nScratch Paper!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 245,
+  "fields": {
+    "uuid": "OCtWnGJtPuc",
+    "content": "Why is the new Kindle screen textured to look like paper? So you feel write at home.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 246,
+  "fields": {
+    "uuid": "ORK6UDA5hqc",
+    "content": "When my wife told me to stop impersonating a flamingo, I had to put my foot down.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 247,
+  "fields": {
+    "uuid": "OZLuP7UDtkb",
+    "content": "What\u2019s the advantage of living in Switzerland? Well, the flag is a big plus.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 248,
+  "fields": {
+    "uuid": "OfNmyI6Ed",
+    "content": "Why did the cookie cry? It was feeling crumby.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 249,
+  "fields": {
+    "uuid": "PC5TCQuXnrc",
+    "content": "Where do you learn to make banana splits? At sundae school.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 250,
+  "fields": {
+    "uuid": "PRZ8xHtcprc",
+    "content": "Nurse: Doctor, there's a patient that says he's invisible. Doctor: Well, tell him I can't see him right now!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 251,
+  "fields": {
+    "uuid": "PZDAXL6pOCd",
+    "content": "What was a more important invention than the first telephone? The second one.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 252,
+  "fields": {
+    "uuid": "PZgyPmjb2ob",
+    "content": "What do you get when you cross a snowman with a vampire? Frostbite.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 253,
+  "fields": {
+    "uuid": "PmyXSfxHBd",
+    "content": "Did you know crocodiles could grow up to 15 feet? But most just have 4.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 254,
+  "fields": {
+    "uuid": "PucUvXSvkqc",
+    "content": "Why did the fireman wear red, white, and blue suspenders? To hold his pants up.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 255,
+  "fields": {
+    "uuid": "Q7pGY0Dt4Ed",
+    "content": "What do you call someone with no nose? Nobody knows.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 256,
+  "fields": {
+    "uuid": "QKJR79EIYDd",
+    "content": "What do you call a girl between two posts? Annette.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 257,
+  "fields": {
+    "uuid": "Qn31o49Musc",
+    "content": "What do you call a fat psychic? A four-chin teller.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 258,
+  "fields": {
+    "uuid": "Qn3EIRZorrc",
+    "content": "I used to be a banker, but I lost interest.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 259,
+  "fields": {
+    "uuid": "QnWnWSfiqc",
+    "content": "Why can't a bicycle stand on its own? It's two-tired.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 260,
+  "fields": {
+    "uuid": "QuscibaMClb",
+    "content": "What does a pirate pay for his corn? A buccaneer!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 261,
+  "fields": {
+    "uuid": "Qusrcahiib",
+    "content": "Astronomers got tired watching the moon go around the earth for 24 hours. They decided to call it a day.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 262,
+  "fields": {
+    "uuid": "R7UfaahVfFd",
+    "content": "My dog used to chase people on a bike a lot. It got so bad I had to take his bike away.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 263,
+  "fields": {
+    "uuid": "R7hFtWv49h",
+    "content": "I ate a clock yesterday. It was so time consuming.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 264,
+  "fields": {
+    "uuid": "RC51wcNRClb",
+    "content": "Two dyslexics walk into a bra.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 265,
+  "fields": {
+    "uuid": "RSvzPuzAdpb",
+    "content": "Milk is also the fastest liquid on earth \u2013 its pasteurized before you even see it",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 266,
+  "fields": {
+    "uuid": "RZv4h3gV0g",
+    "content": "Is the pool safe for diving? It deep ends.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 267,
+  "fields": {
+    "uuid": "RfiGei3E6Ed",
+    "content": "Why do scuba divers fall backwards into the water? Because if they fell forwards they\u2019d still be in the boat.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 268,
+  "fields": {
+    "uuid": "RuHYTSvzsrc",
+    "content": "My wife told me to rub the herbs on the meat for better flavor. That's sage advice.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 269,
+  "fields": {
+    "uuid": "S0TvXvzPfFd",
+    "content": "A man was caught stealing in a supermarket today while balanced on the shoulders of a couple of vampires. He was charged with shoplifting on two counts. ",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 270,
+  "fields": {
+    "uuid": "S7MCtHBQuc",
+    "content": "Ben & Jerry's really need to improve their operation. The only way to get there is down a rocky road.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 271,
+  "fields": {
+    "uuid": "S7wHQKJe2wc",
+    "content": "How are false teeth like stars? They come out at night!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 272,
+  "fields": {
+    "uuid": "SKeqOucNeFd",
+    "content": "What time did the man go to the dentist? Tooth hurt-y.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 273,
+  "fields": {
+    "uuid": "SSCQCdi39Ed",
+    "content": "Did you hear about the cheese factory that exploded in France? There was nothing left but de Brie.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 274,
+  "fields": {
+    "uuid": "SSnW8xsrrjb",
+    "content": "How does a penguin build it\u2019s house? Igloos it together.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 275,
+  "fields": {
+    "uuid": "Sn39Elb2LBd",
+    "content": "What is this movie about? It is about 2 hours long.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 276,
+  "fields": {
+    "uuid": "SnOf2gqjiqc",
+    "content": "Why are pirates called pirates? Because they arrr!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 277,
+  "fields": {
+    "uuid": "SnrcpbhVKBd",
+    "content": "Where does Fonzie like to go for lunch? Chick-Fil-Eyyyyyyyy.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 278,
+  "fields": {
+    "uuid": "SvPRCIeiNuc",
+    "content": "How does a dyslexic poet write? Inverse.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 279,
+  "fields": {
+    "uuid": "SvXDImbMe",
+    "content": "Don't tell secrets in corn fields. Too many ears around.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 280,
+  "fields": {
+    "uuid": "SvzIBAQS0Dd",
+    "content": "What did the pirate say on his 80th birthday? Aye Matey!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 281,
+  "fields": {
+    "uuid": "TC5TCt49prc",
+    "content": "Why did the A go to the bathroom and come out as an E? Because he had a vowel movement.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 282,
+  "fields": {
+    "uuid": "TCA59hiiVvc",
+    "content": "Yesterday a clown held a door open for me. I thought it was a nice jester.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 283,
+  "fields": {
+    "uuid": "TCY0LmGQnb",
+    "content": "Why did the opera singer go sailing? They wanted to hit the high Cs.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 284,
+  "fields": {
+    "uuid": "TKZD592LZob",
+    "content": "Never Trust Someone With Graph Paper...\r\n\r\nThey're always plotting something.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 285,
+  "fields": {
+    "uuid": "TKmbUDI6UDd",
+    "content": "What do you call an elephant that doesn\u2019t matter? An irrelephant.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 286,
+  "fields": {
+    "uuid": "TS0gFlqr4ob",
+    "content": "What do you call a group of disorganized cats? A cat-tastrophe.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 287,
+  "fields": {
+    "uuid": "TS7U0oWnjyd",
+    "content": "What is bread's favorite number?  Leaven.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 288,
+  "fields": {
+    "uuid": "TSfFYT7EBd",
+    "content": "Why can\u2019t you hear a pterodactyl go to the bathroom? The p is silent.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 289,
+  "fields": {
+    "uuid": "TfVvX0wscib",
+    "content": "How do you know if there\u2019s an elephant under your bed? Your head hits the ceiling!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 290,
+  "fields": {
+    "uuid": "TvPf2gyAdxc",
+    "content": "Why does Norway have barcodes on their battleships? So when they get back to port, they can Scandinavian.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 291,
+  "fields": {
+    "uuid": "TvPfV8prOuc",
+    "content": "What's the worst part about being a cross-eyed teacher?\r\n\r\nThey can't control their pupils.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 292,
+  "fields": {
+    "uuid": "Tvcah31oWvc",
+    "content": "What do you call a fashionable lawn statue with an excellent sense of rhythmn? A metro-gnome",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 293,
+  "fields": {
+    "uuid": "TvzdxXSCdFd",
+    "content": "Someone broke into my house last night and stole my limbo trophy. How low can you go?",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 294,
+  "fields": {
+    "uuid": "UKeFB59EQf",
+    "content": "Why did the coffee file a police report? It got mugged.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 295,
+  "fields": {
+    "uuid": "UKeiNeVnrc",
+    "content": "Mountains aren't just funny, they are hill areas",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 296,
+  "fields": {
+    "uuid": "UKuXvzAlOuc",
+    "content": "I was going to learn how to juggle, but I didn't have the balls.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 297,
+  "fields": {
+    "uuid": "UfqHY8EQClb",
+    "content": "I wear a stethoscope so that in a medical emergency I can teach people a valuable lesson about assumptions.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 298,
+  "fields": {
+    "uuid": "UfxAIm3wkjb",
+    "content": "Why are ghosts bad liars? Because you can see right through them!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 299,
+  "fields": {
+    "uuid": "UnWS0wcF6Ed",
+    "content": "Every machine in the coin factory broke down all of a sudden without explanation. It just doesn\u2019t make any cents.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 300,
+  "fields": {
+    "uuid": "V0gyPusWSCd",
+    "content": "Why does it take longer to get from 1st to 2nd base, than it does to get from 2nd to 3rd base? Because there\u2019s a Shortstop in between!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 301,
+  "fields": {
+    "uuid": "V0orcFdFIBd",
+    "content": "What do you do when you see a space man?\r\nPark your car, man.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 302,
+  "fields": {
+    "uuid": "V0wkbprcprc",
+    "content": "If you want a job in the moisturizer industry, the best advice I can give is to apply daily.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 303,
+  "fields": {
+    "uuid": "VDYgib2T7wc",
+    "content": "When you have a bladder infection, urine trouble.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 304,
+  "fields": {
+    "uuid": "VKe2gNCQnb",
+    "content": "What do you call a group of killer whales playing instruments? An Orca-stra.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 305,
+  "fields": {
+    "uuid": "VKexkV0LeFd",
+    "content": "I was in an 80's band called the prevention. We were better than the cure.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 306,
+  "fields": {
+    "uuid": "VSn3oOmyPmb",
+    "content": "What did Michael Jackson name his denim store?    Billy Jeans!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 307,
+  "fields": {
+    "uuid": "VfFlGJmOmb",
+    "content": "People saying 'boo! to their friends has risen by 85% in the last year.... That's a frightening statistic.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 308,
+  "fields": {
+    "uuid": "VnysHtWvkqc",
+    "content": "Geology rocks, but Geography is where it's at!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 309,
+  "fields": {
+    "uuid": "VvP7U0D5TCd",
+    "content": "I was at the library and asked if they have any books on \"paranoia\", the librarian replied, \"yes, they are right behind you\"",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 310,
+  "fields": {
+    "uuid": "W018xscFIe",
+    "content": "Have you heard of the band 1023MB? They haven't got a gig yet.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 311,
+  "fields": {
+    "uuid": "W82EtW01wkb",
+    "content": "What happens when you anger a brain surgeon? They will give you a piece of your mind.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 312,
+  "fields": {
+    "uuid": "W8MClVvXSf",
+    "content": "I needed a password eight characters long so I picked Snow White and the Seven Dwarfs.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 313,
+  "fields": {
+    "uuid": "WLJJRKJeqjb",
+    "content": "I used to work in a shoe recycling shop. It was sole destroying.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 314,
+  "fields": {
+    "uuid": "WSKe2ojiNe",
+    "content": "I used to hate facial hair, but then it grew on me.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 315,
+  "fields": {
+    "uuid": "WgFY82ozsrc",
+    "content": "R.I.P. boiled water. You will be mist.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 316,
+  "fields": {
+    "uuid": "WgV0T0wk3ob",
+    "content": "Q: What did the spaghetti say to the other spaghetti?\r\nA: Pasta la vista, baby!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 317,
+  "fields": {
+    "uuid": "WvHJJ611wAd",
+    "content": "The first time I got a universal remote control I thought to myself, \"This changes everything\"",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 318,
+  "fields": {
+    "uuid": "WvHJJ61obFd",
+    "content": "Why is the ocean always blue? Because the shore never waves back.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 319,
+  "fields": {
+    "uuid": "WvsHlyszkyd",
+    "content": "Why did the man put his money in the freezer? He wanted cold hard cash!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 320,
+  "fields": {
+    "uuid": "X01T0DQKuzd",
+    "content": "I decided to sell my Hoover\u2026 well it was just collecting dust.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 321,
+  "fields": {
+    "uuid": "X0wkGJtPKuc",
+    "content": "Why do ducks make great detectives? They always quack the case.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 322,
+  "fields": {
+    "uuid": "X8pWSKJRZg",
+    "content": "What does a clock do when it's hungry? It goes back four seconds!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 323,
+  "fields": {
+    "uuid": "X8xAlq4E6Ed",
+    "content": "What do I look like? A JOKE MACHINE!?",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 324,
+  "fields": {
+    "uuid": "XDImr41obh",
+    "content": "I bought shoes from a drug dealer once. I don't know what he laced them with, but I was tripping all day.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 325,
+  "fields": {
+    "uuid": "XLRfNuPZDAd",
+    "content": "What is a tornado's favorite game to play? Twister!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 326,
+  "fields": {
+    "uuid": "XgVnOK6USnb",
+    "content": "You know that cemetery up the road? People are dying to get in there.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 327,
+  "fields": {
+    "uuid": "Xn3wX8hi3Ed",
+    "content": "Did you hear about the Mexican train killer? He had loco motives",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 328,
+  "fields": {
+    "uuid": "Xny5MZvHQCd",
+    "content": "Can I watch the TV? Dad: Yes, but don\u2019t turn it on.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 329,
+  "fields": {
+    "uuid": "YLm39E6pjqc",
+    "content": "What do vegetarian zombies eat? Grrrrrainnnnnssss.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 330,
+  "fields": {
+    "uuid": "Yg3orWS7wkb",
+    "content": "\"I'm sorry.\" \"Hi sorry, I'm dad\"",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 331,
+  "fields": {
+    "uuid": "YvHQnW8U8pb",
+    "content": "What is the hardest part about sky diving? The ground.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 332,
+  "fields": {
+    "uuid": "YvkV8xXnjyd",
+    "content": "Why did the cowboy have a weiner dog? Somebody told him to get a long little doggy.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 333,
+  "fields": {
+    "uuid": "Z8UDIRuXLmb",
+    "content": "Who did the wizard marry? His ghoul-friend",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 334,
+  "fields": {
+    "uuid": "Z8p4MeaaFBd",
+    "content": "How many seconds are in a year?\r\n12.\r\nJanuary 2nd, February 2nd, March 2nd, April 2nd.... etc",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 335,
+  "fields": {
+    "uuid": "ZDAIRn39prc",
+    "content": "Ever wondered why bees hum? It's because they don't know the words.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 336,
+  "fields": {
+    "uuid": "ZDAlOZgydxc",
+    "content": "How many optometrists does it take to change a light bulb? 1 or 2? 1... or 2?",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 337,
+  "fields": {
+    "uuid": "ZDIYvPKBQuc",
+    "content": "There's not really any training for garbagemen. They just pick things up as they go.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 338,
+  "fields": {
+    "uuid": "ZDtzdFlqOf",
+    "content": "Did you hear about the cow who jumped over the barbed wire fence? It was udder destruction.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 339,
+  "fields": {
+    "uuid": "ZgyPZDtkbFd",
+    "content": "What do you call a bear with no teeth? A gummy bear!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 340,
+  "fields": {
+    "uuid": "Zo4E6pbFIBd",
+    "content": "I\u2019ve deleted the phone numbers of all the Germans I know from my mobile phone. Now it\u2019s Hans free.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 341,
+  "fields": {
+    "uuid": "ZobU08UKBd",
+    "content": "A doll was recently found dead in a rice paddy. It's the only known instance of a nick nack paddy wack.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 342,
+  "fields": {
+    "uuid": "Zv4wHQuXgyd",
+    "content": "How do you tell the difference between a crocodile and an alligator? You will see one later and one in a while.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 343,
+  "fields": {
+    "uuid": "ZvHBQC59Muc",
+    "content": "What do you call a fake noodle? An impasta.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 344,
+  "fields": {
+    "uuid": "ZvPfFQukVvc",
+    "content": "The word queue is ironic. It's just q with a bunch of silent letters waiting in line.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 345,
+  "fields": {
+    "uuid": "ZvzkyXnWLuc",
+    "content": "What do you call a droid that takes the long way around? R2 detour.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 346,
+  "fields": {
+    "uuid": "a218pbMmOmb",
+    "content": "What's the best thing about elevator jokes? They work on so many levels.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 347,
+  "fields": {
+    "uuid": "a29pbp4haFd",
+    "content": "Where do rabbits go after they get married? On a bunny-moon.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 348,
+  "fields": {
+    "uuid": "aFtzPRSnbxc",
+    "content": "Two fish are in a tank, one turns to the other and says, \"how do you drive this thing?\"",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 349,
+  "fields": {
+    "uuid": "aMmbaFYTKBd",
+    "content": "I finally bought the limited edition Thesaurus that I've always wanted. When I opened it, all the pages were blank.\r\nI have no words to describe how angry I am.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 350,
+  "fields": {
+    "uuid": "aaUKeahqWvc",
+    "content": "This is my step ladder. I never knew my real ladder.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 351,
+  "fields": {
+    "uuid": "ahqjV82LBAd",
+    "content": "I was thinking about moving to Moscow but there is no point Russian into things.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 352,
+  "fields": {
+    "uuid": "ap4orcpGtrc",
+    "content": "A man walks into a bar and orders helicopter flavor chips. The barman replies \u201csorry mate we only do plain\u201d",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 353,
+  "fields": {
+    "uuid": "apjyd21DQuc",
+    "content": "I got an A on my origami assignment when I turned my paper into my teacher",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 354,
+  "fields": {
+    "uuid": "axPR79MZvc",
+    "content": "What did the fish say when it swam into a wall? Damn!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 355,
+  "fields": {
+    "uuid": "bMus4MZDAlb",
+    "content": "Why does Waldo only wear stripes? Because he doesn't want to be spotted.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 356,
+  "fields": {
+    "uuid": "baFQZv4w5wc",
+    "content": "My New Years resolution is to stop leaving things so late.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 357,
+  "fields": {
+    "uuid": "bprz5wXSSvc",
+    "content": "Why did the scarecrow win an award? Because he was outstanding in his field.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 358,
+  "fields": {
+    "uuid": "bxXLeqzP7wc",
+    "content": "Americans can't switch from pounds to kilograms overnight. That would cause mass confusion.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 359,
+  "fields": {
+    "uuid": "c2LJR7Ed2ob",
+    "content": "An apple a day keeps the bullies away. If you throw it hard enough.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 360,
+  "fields": {
+    "uuid": "c2TSfxXgqrc",
+    "content": "Why does Superman get invited to dinners? Because he is a Supperhero.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 361,
+  "fields": {
+    "uuid": "cFd21gNClyd",
+    "content": "Why is no one friends with Dracula? Because he's a pain in the neck.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 362,
+  "fields": {
+    "uuid": "cNRZTfFtrjb",
+    "content": "A man got hit in the head with a can of Coke, but he was alright because it was a soft drink.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 363,
+  "fields": {
+    "uuid": "cUnWLRZ01wc",
+    "content": "What is the leading cause of dry skin? Towels",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 364,
+  "fields": {
+    "uuid": "cUvsHt41gFd",
+    "content": "A man walked in to a bar with some asphalt on his arm. He said \u201cTwo beers please, one for me and one for the road.\u201d",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 365,
+  "fields": {
+    "uuid": "ci311DtH6h",
+    "content": "I\u2019ll tell you something about German sausages, they\u2019re the wurst",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 366,
+  "fields": {
+    "uuid": "cp4TCdahqc",
+    "content": "I got fired from a florist, apparently I took too many leaves.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 367,
+  "fields": {
+    "uuid": "cxHYg3gFQf",
+    "content": "I got fired from the transmission factor, turns out I didn't put on enough shifts...",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 368,
+  "fields": {
+    "uuid": "cxXv4Elj3wc",
+    "content": "Where do young cows eat lunch? In the calf-ateria.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 369,
+  "fields": {
+    "uuid": "cxcpGeiyAd",
+    "content": "I went to the doctor today and he told me I had type A blood but it was a type O.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 370,
+  "fields": {
+    "uuid": "d21DAXSCljb",
+    "content": "How does a French skeleton say hello? Bone-jour.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 371,
+  "fields": {
+    "uuid": "daaUfibh",
+    "content": "Why was the big cat disqualified from the race? Because it was a cheetah.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 372,
+  "fields": {
+    "uuid": "daxcxciqHe",
+    "content": "What do prisoners use to call each other? Cell phones.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 373,
+  "fields": {
+    "uuid": "diGeqOfiqc",
+    "content": "What\u2019s E.T. short for? He\u2019s only got little legs.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 374,
+  "fields": {
+    "uuid": "dibUSv4ojyd",
+    "content": "What kind of award did the dentist receive? A little plaque.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 375,
+  "fields": {
+    "uuid": "dpGtcxPKuzd",
+    "content": "Do you know where you can get chicken broth in bulk? The stock market.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 376,
+  "fields": {
+    "uuid": "dpWvHtW0Tnb",
+    "content": "What's orange and sounds like a parrot? A Carrot.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 377,
+  "fields": {
+    "uuid": "dprjbhyAAAd",
+    "content": "A Sandwich walks into a bar, the bartender says \u201cSorry, we don\u2019t serve food here\u201d",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 378,
+  "fields": {
+    "uuid": "e2obFd2oOf",
+    "content": "I thought about going on an all-almond diet. But that's just nuts.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 379,
+  "fields": {
+    "uuid": "eFlVnrOClyd",
+    "content": "I don\u2019t play soccer because I enjoy the sport. I\u2019m just doing it for kicks.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 380,
+  "fields": {
+    "uuid": "eNmyXDtzkqc",
+    "content": "Today a girl said she recognized me from vegetarian club, but I\u2019m sure I\u2019ve never met herbivore.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 381,
+  "fields": {
+    "uuid": "eNuHJBQCdFd",
+    "content": "How do you organize a space party? You planet.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 382,
+  "fields": {
+    "uuid": "eNuPm3Etzkb",
+    "content": "How do you make holy water? You boil the hell out of it.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 383,
+  "fields": {
+    "uuid": "eVKRZTKeiib",
+    "content": "A man is washing the car with his son. The son asks...... \"Dad, can\u2019t you just use a sponge?\"",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 384,
+  "fields": {
+    "uuid": "ea2TnGBXnrc",
+    "content": "They laughed when I said I wanted to be a comedian \u2013 they\u2019re not laughing now.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 385,
+  "fields": {
+    "uuid": "ea2wkyscah",
+    "content": "What does an angry pepper do? It gets jalape\u00f1o face.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 386,
+  "fields": {
+    "uuid": "eaMCQKRZ0ob",
+    "content": "Don't buy flowers at a monastery. Because only you can prevent florist friars.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 387,
+  "fields": {
+    "uuid": "ei3T08EQZob",
+    "content": "Hostess: Do you have a preference of where you sit?\r\nDad: Down.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 388,
+  "fields": {
+    "uuid": "eiiVvH6MCd",
+    "content": "Did you hear about the submarine industry? It really took a dive...",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 389,
+  "fields": {
+    "uuid": "exH6pOuzXDd",
+    "content": "How do you get a baby alien to sleep?  You rocket.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 390,
+  "fields": {
+    "uuid": "exXSCtkOKe",
+    "content": "Why do pirates not know the alphabet? They always get stuck at \"C\".",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 391,
+  "fields": {
+    "uuid": "f211DdFBdxc",
+    "content": "Did you hear about the chameleon who couldn't change color? They had a reptile dysfunction.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 392,
+  "fields": {
+    "uuid": "fNZTCdFBImb",
+    "content": "Why did the house go to the doctor? It was having window panes.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 393,
+  "fields": {
+    "uuid": "fNmOm3Ediyd",
+    "content": "What do you call a dictionary on drugs? High definition.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 394,
+  "fields": {
+    "uuid": "fVKuPmjq4Ed",
+    "content": "A Skeleton walked into a bar he said I need a beer and a mop",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 395,
+  "fields": {
+    "uuid": "fiyPR7wPZDd",
+    "content": "When does a joke become a dad joke? When it becomes apparent.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 396,
+  "fields": {
+    "uuid": "fiydpr4EQnb",
+    "content": "What\u2019s brown and sounds like a bell? Dung!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 397,
+  "fields": {
+    "uuid": "fqWgFt4Edxc",
+    "content": "Why do crabs never give to charity? Because they\u2019re shellfish.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 398,
+  "fields": {
+    "uuid": "g3LZTCYDYg",
+    "content": "What do you call a pig with three eyes? Piiig",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 399,
+  "fields": {
+    "uuid": "gFtrHYoWnjb",
+    "content": "How do you make a hankie dance? Put a little boogie in it.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 400,
+  "fields": {
+    "uuid": "gNRnWvzdiib",
+    "content": "Sgt.: Commissar! Commissar! The troops are revolting! Commissar: Well, you\u2019re pretty repulsive yourself.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 401,
+  "fields": {
+    "uuid": "gNZTCQnWSf",
+    "content": "The other day I was listening to a song about superglue, it\u2019s been stuck in my head ever since.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 402,
+  "fields": {
+    "uuid": "gaUfNJ6hapb",
+    "content": "If you\u2019re struggling to think of what to get someone for Christmas. Get them a fridge and watch their face light up when they open it.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 403,
+  "fields": {
+    "uuid": "giyXgahV0wc",
+    "content": "The great thing about stationery shops is they're always in the same place...",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 404,
+  "fields": {
+    "uuid": "hNu4oORnOmb",
+    "content": "What do you call cheese by itself? Provalone!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 405,
+  "fields": {
+    "uuid": "haMJRfF6hFd",
+    "content": "How do you fix a broken pizza? With tomato paste.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 406,
+  "fields": {
+    "uuid": "haahVKZDtrc",
+    "content": "What's red and bad for your teeth? A Brick.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 407,
+  "fields": {
+    "uuid": "hiVSCdUvXg",
+    "content": "I heard there was a new store called Moderation. They have everything there",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 408,
+  "fields": {
+    "uuid": "hqjGlyImrzd",
+    "content": "A beekeeper was indicted after he confessed to years of stealing at work. They charged him with emBEEzlement",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 409,
+  "fields": {
+    "uuid": "hyPmOZLBIBd",
+    "content": "I used to work for a soft drink can crusher. It was soda pressing.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 410,
+  "fields": {
+    "uuid": "i31LeNRuzAd",
+    "content": "Why did the chicken get a penalty? For fowl play.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 411,
+  "fields": {
+    "uuid": "i39hqWnGljb",
+    "content": "When Dad drops a pea off of his plate \u2018oh dear I\u2019ve pee\u2019d on the table!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 412,
+  "fields": {
+    "uuid": "iGJeVKmWDlb",
+    "content": "My cat was just sick on the carpet, I don\u2019t think it\u2019s feline well.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 413,
+  "fields": {
+    "uuid": "iGQZDAIRZDd",
+    "content": "Why did the burglar hang his mugshot on the wall? To prove that he was framed!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 414,
+  "fields": {
+    "uuid": "iGlOClqrrrc",
+    "content": "I dreamed about drowning in an ocean made out of orange soda last night. It took me a while to work out it was just a Fanta sea.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 415,
+  "fields": {
+    "uuid": "iV0DQ7pjGlb",
+    "content": "I had a dream that I was a muffler last night. I woke up exhausted!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 416,
+  "fields": {
+    "uuid": "iq4hVD599pb",
+    "content": "Doctor you've got you help me, I'm addicted to twitter. Doctor: I don't follow you.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 417,
+  "fields": {
+    "uuid": "jNCtkyIeNuc",
+    "content": "I broke my finger at work today, on the other hand I'm completely fine.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 418,
+  "fields": {
+    "uuid": "jNmykbUSSvc",
+    "content": "I went to a book store and asked the saleswoman where the Self Help section was, she said if she told me it would defeat the purpose.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 419,
+  "fields": {
+    "uuid": "jVKBQS0o4h",
+    "content": "How does a scientist freshen their breath? With experi-mints!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 420,
+  "fields": {
+    "uuid": "jbU0LmyPKBd",
+    "content": "What has ears but cannot hear? A field of corn.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 421,
+  "fields": {
+    "uuid": "jbpbFlORCAd",
+    "content": "People who don't eat gluten are really going against the grain.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 422,
+  "fields": {
+    "uuid": "jiVfq4MZDlb",
+    "content": "Sore throats are a pain in the neck!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 423,
+  "fields": {
+    "uuid": "jyPCYTKuskb",
+    "content": "How did Darth Vader know what Luke was getting for Christmas? He felt his presents.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 424,
+  "fields": {
+    "uuid": "jyPf2giqHlb",
+    "content": "What's the difference between a seal and a sea lion?\r\nAn ion! ",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 425,
+  "fields": {
+    "uuid": "kOfaUvP7Muc",
+    "content": "What did the Dorito farmer say to the other Dorito farmer? Cool Ranch!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 426,
+  "fields": {
+    "uuid": "kbUv4T0Ddxc",
+    "content": "A ghost walks into a bar and asks for a glass of vodka but the bar tender says, \u201csorry we don\u2019t serve spirits\u201d",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 427,
+  "fields": {
+    "uuid": "kqcFBlGJYDd",
+    "content": "You know what they say about cliffhangers...",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 428,
+  "fields": {
+    "uuid": "kqjNmbM7wsc",
+    "content": "Why do wizards clean their teeth three times a day? To prevent bat breath!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 429,
+  "fields": {
+    "uuid": "lG6pjibpbxc",
+    "content": "Feeling pretty proud of myself. The Sesame Street puzzle I bought said 3-5 years, but I finished it in 18 months.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 430,
+  "fields": {
+    "uuid": "lGJmrrzAsc",
+    "content": "A termite walks into a bar and asks \u201cIs the bar tender here?\u201d",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 431,
+  "fields": {
+    "uuid": "lGe2Tvskyd",
+    "content": "Why are fish so smart? Because they live in schools!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 432,
+  "fields": {
+    "uuid": "lGlbhqjGJBd",
+    "content": "How does the moon cut his hair? Eclipse it.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 433,
+  "fields": {
+    "uuid": "lV8hqHexHBd",
+    "content": "Why did the worker get fired from the orange juice factory? Lack of concentration.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 434,
+  "fields": {
+    "uuid": "lbU01DljGtc",
+    "content": "I couldn't get a reservation at the library. They were completely booked.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 435,
+  "fields": {
+    "uuid": "ljGB5o49Elb",
+    "content": "Dad, can you put my shoes on? I don't think they'll fit me.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 436,
+  "fields": {
+    "uuid": "ljqzkVKJtrc",
+    "content": "How do you get two whales in a car? Start in England and drive West.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 437,
+  "fields": {
+    "uuid": "lqWgFlyPusc",
+    "content": "What do you call an Argentinian with a rubber toe? Roberto",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 438,
+  "fields": {
+    "uuid": "ly5hNR7w5Ed",
+    "content": "I tried taking some high resolution photos of local farmland, but they all turned out a bit grainy.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 439,
+  "fields": {
+    "uuid": "lyPZgVn3Le",
+    "content": "What did the ocean say to the shore? Nothing, it just waved.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 440,
+  "fields": {
+    "uuid": "lyk3EIBQfxc",
+    "content": "I went to the zoo the other day, there was only one dog in it. It was a shitzu.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 441,
+  "fields": {
+    "uuid": "m3E69pbhaFd",
+    "content": "I gave all my dead batteries away today, free of charge.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 442,
+  "fields": {
+    "uuid": "m3wPZoz51ob",
+    "content": "Did you hear the news? FedEx and UPS are merging. They\u2019re going to go by the name Fed-Up from now on.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 443,
+  "fields": {
+    "uuid": "mG61giiy5wc",
+    "content": "Why didn't the number 4 get into the nightclub? Because he is 2 square.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 444,
+  "fields": {
+    "uuid": "mGeFlykbFBd",
+    "content": "What do you call a sheep with no legs? A cloud.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 445,
+  "fields": {
+    "uuid": "mGtHtcUfqjb",
+    "content": "Did you hear that David lost his ID in prague? Now we just have to call him Dav.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 446,
+  "fields": {
+    "uuid": "mO7hqWvsPCd",
+    "content": "My wife is on a tropical fruit diet, the house is full of stuff. It is enough to make a mango crazy.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 447,
+  "fields": {
+    "uuid": "mOfqzdx51wc",
+    "content": "Why do mathematicians hate the U.S.? Because it's indivisible.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 448,
+  "fields": {
+    "uuid": "mW01DA511ob",
+    "content": "I knew i shouldn\u2019t have ate that seafood. Because now i\u2019m feeling a little\u2026 Eel",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 449,
+  "fields": {
+    "uuid": "mWS7hVKRSnb",
+    "content": "Past, present, and future walked into a bar.... It was tense.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 450,
+  "fields": {
+    "uuid": "mbpbapbhiyd",
+    "content": "Did you hear about the bread factory burning down? They say the business is toast.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 451,
+  "fields": {
+    "uuid": "mrHQKBA5MCd",
+    "content": "My boss told me that he was going to fire the person with the worst posture. I have a hunch, it might be me.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 452,
+  "fields": {
+    "uuid": "n3gVSC5oOmb",
+    "content": "What's black and white and read all over? The newspaper.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 453,
+  "fields": {
+    "uuid": "n3o4orjiysc",
+    "content": "Why are skeletons so calm? Because nothing gets under their skin.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 454,
+  "fields": {
+    "uuid": "nOfNJY89EBd",
+    "content": "Without geometry life is pointless.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 455,
+  "fields": {
+    "uuid": "nOfV0gVKBd",
+    "content": "\u201cHold on, I have something in my shoe\u201d  \u201cI\u2019m pretty sure it\u2019s a foot\u201d",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 456,
+  "fields": {
+    "uuid": "nWDdFdFYLuc",
+    "content": "Have you heard about the film \"Constipation\", you probably haven't because it's not out yet.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 457,
+  "fields": {
+    "uuid": "nWvXSvHBd",
+    "content": "I hate perforated lines, they're tearable.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 458,
+  "fields": {
+    "uuid": "nbFBdiydxkb",
+    "content": "Why did the barber win the race? He took a short cut.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 459,
+  "fields": {
+    "uuid": "nrrj3TfFdxc",
+    "content": "Why did the octopus beat the shark in a fight? Because it was well armed.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 460,
+  "fields": {
+    "uuid": "o4MexXSClb",
+    "content": "What did the judge say to the dentist? Do you swear to pull the tooth, the whole tooth and nothing but the tooth?",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 461,
+  "fields": {
+    "uuid": "oGBIRKuPukb",
+    "content": "\"What time is it?\" I don't know... it keeps changing.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 462,
+  "fields": {
+    "uuid": "oGY0wsWnysc",
+    "content": "You can't trust a ladder. It will always let you down",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 463,
+  "fields": {
+    "uuid": "oOR7hFdx5Ed",
+    "content": "I wouldn't buy anything with velcro. It's a total rip-off.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 464,
+  "fields": {
+    "uuid": "oORfVv4oOCd",
+    "content": "What are the strongest days of the week? Saturday and Sunday...the rest are weekdays.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 465,
+  "fields": {
+    "uuid": "oWS08MeVvzd",
+    "content": "My friend said to me: \"What rhymes with orange\" I said: \"no it doesn't\"",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 466,
+  "fields": {
+    "uuid": "obahq4MJtzd",
+    "content": "I had a rough day, and then somebody went and ripped the front and back pages from my dictionary. It just goes from bad to worse.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 467,
+  "fields": {
+    "uuid": "obhFBljb2g",
+    "content": "I adopted my dog from a blacksmith. As soon as we got home he made a bolt for the door.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 468,
+  "fields": {
+    "uuid": "ozPf21LJJtc",
+    "content": "Where does batman go to the bathroom? The batroom.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 469,
+  "fields": {
+    "uuid": "ozPmbFtWDlb",
+    "content": "Some people say that comedians who tell one too many light bulb jokes soon burn out, but they don't know watt they are talking about. They're not that bright.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 470,
+  "fields": {
+    "uuid": "ozsPmORZvzd",
+    "content": "A bartender broke up with her boyfriend, but he kept asking her for another shot.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 471,
+  "fields": {
+    "uuid": "p4oWvPClVnb",
+    "content": "What do you call a cow on a trampoline? A milk shake!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 472,
+  "fields": {
+    "uuid": "pGe2EYozAsc",
+    "content": "What do you call a nervous javelin thrower? Shakespeare.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 473,
+  "fields": {
+    "uuid": "pOuzPmyIYob",
+    "content": "What do you call an eagle who can play the piano? Talonted!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 474,
+  "fields": {
+    "uuid": "pWLRK6pWDtc",
+    "content": "What do you call a boomerang that won't come back? A stick.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 475,
+  "fields": {
+    "uuid": "pWn31TCQ7pb",
+    "content": "What do you call a duck that gets all A's? A wise quacker.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 476,
+  "fields": {
+    "uuid": "pjyA59MRusc",
+    "content": "There\u2019s a new type of broom out, it\u2019s sweeping the nation.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 477,
+  "fields": {
+    "uuid": "prWLBszsWDd",
+    "content": "The shovel was a ground-breaking invention.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 478,
+  "fields": {
+    "uuid": "pzXvHl3EYg",
+    "content": "Why don\u2019t seagulls fly over the bay? Because then they\u2019d be bay-gulls!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 479,
+  "fields": {
+    "uuid": "pzkbpORS7wc",
+    "content": "Parallel lines have so much in common. It\u2019s a shame they\u2019ll never meet.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 480,
+  "fields": {
+    "uuid": "qOK61Tvs4Ed",
+    "content": "When do doctors get angry? When they run out of patients.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 481,
+  "fields": {
+    "uuid": "qOmyPmO79h",
+    "content": "A man tried to sell me a coffin today. I told him that's the last thing I need.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 482,
+  "fields": {
+    "uuid": "qWDlOZozXDd",
+    "content": "It doesn't matter how much you push the envelope. It will still be stationary.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 483,
+  "fields": {
+    "uuid": "qjV8EIRfVnb",
+    "content": "What did the shy pebble wish for? That she was a little boulder.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 484,
+  "fields": {
+    "uuid": "qjbF6E6wHlb",
+    "content": "Why did the belt go to prison? He held up a pair of pants!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 485,
+  "fields": {
+    "uuid": "qjyszskjNCd",
+    "content": "Wife told me to take the spider out instead of killing it... We had some drinks, cool guy, wants to be a web developer.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 486,
+  "fields": {
+    "uuid": "qrHJ69M7hFd",
+    "content": "What cheese can never be yours? Nacho cheese.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 487,
+  "fields": {
+    "uuid": "qrHeiqHJmrc",
+    "content": "What is a vampire's favorite fruit? A blood orange.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 488,
+  "fields": {
+    "uuid": "qrOfN7w5ojb",
+    "content": "A cannibal is someone who is fed up with people.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 489,
+  "fields": {
+    "uuid": "rHBQuXLR7h",
+    "content": "Why did the cookie cry?\r\nBecause his mother was a wafer so long",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 490,
+  "fields": {
+    "uuid": "rc2E6EdiNe",
+    "content": "Want to hear my pizza joke? Never mind, it's too cheesy.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 491,
+  "fields": {
+    "uuid": "rcxk3TSKusc",
+    "content": "What did the grape do when he got stepped on? He let out a little wine.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 492,
+  "fields": {
+    "uuid": "rjiyXLZTSf",
+    "content": "What did the 0 say to the 8? Nice belt.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 493,
+  "fields": {
+    "uuid": "rjqOZoO7pb",
+    "content": "Why was the picture sent to prison? It was framed.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 494,
+  "fields": {
+    "uuid": "rzs4T0oWgFd",
+    "content": "Two peanuts were walking down the street. One was a salted.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 495,
+  "fields": {
+    "uuid": "s4Me29U0gqc",
+    "content": "Cosmetic surgery used to be such a taboo subject.\r\nNow you can talk about Botox and nobody raises an eyebrow.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 496,
+  "fields": {
+    "uuid": "sHlqrjyPf",
+    "content": "How can you tell a vampire has a cold? They start coffin.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 497,
+  "fields": {
+    "uuid": "sPRnOfiyAAd",
+    "content": "At the boxing match, the dad got into the popcorn line and the line for hot dogs, but he wanted to stay out of the punchline.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 498,
+  "fields": {
+    "uuid": "sPfqWDlq4Ed",
+    "content": "\"Hey, dad, did you get a haircut?\" \"No, I got them all cut.\"",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 499,
+  "fields": {
+    "uuid": "sWSSnbaUfqc",
+    "content": "Why is there always a gate around cemeteries? Because people are always dying to get in.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 500,
+  "fields": {
+    "uuid": "scUvsrORKe",
+    "content": "I asked a frenchman if he played video games. He said \"Wii\"",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 501,
+  "fields": {
+    "uuid": "scaUn3TfNe",
+    "content": "So, I heard this pun about cows, but it\u2019s kinda offensive so I won\u2019t say it. I don\u2019t want there to be any beef between us. ",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 502,
+  "fields": {
+    "uuid": "skGtHlORfFd",
+    "content": "What kind of music do planets listen to? Nep-tunes.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 503,
+  "fields": {
+    "uuid": "srjbpzs4h",
+    "content": "Shout out to my grandma, that's the only way she can hear.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 504,
+  "fields": {
+    "uuid": "szItcaFQnjb",
+    "content": "Why was the broom late for the meeting? He overswept.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 505,
+  "fields": {
+    "uuid": "szXDA59U0wc",
+    "content": "I went on a date last night with a girl from the zoo. It was great. She\u2019s a keeper.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 506,
+  "fields": {
+    "uuid": "t4MJRuXDIe",
+    "content": "Why do you never see elephants hiding in trees? Because they're so good at it.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 507,
+  "fields": {
+    "uuid": "tHJtrrzP7wc",
+    "content": "Mahatma Gandhi, as you know, walked barefoot most of the time, which produced an impressive set of calluses on his feet. \r\nHe also ate very little, which made him rather frail and with his odd diet, he suffered from bad breath. \r\nThis made him a super calloused fragile mystic hexed by halitosis.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 508,
+  "fields": {
+    "uuid": "tPuPm3EYDAd",
+    "content": "What do you call an alligator in a vest? An in-vest-igator!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 509,
+  "fields": {
+    "uuid": "tWL618U8Ed",
+    "content": "What did celery say when he broke up with his girlfriend? She wasn't right for me, so I really don't carrot all.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 510,
+  "fields": {
+    "uuid": "tWL6U01obpb",
+    "content": "Thanks for explaining the word \"many\" to me. It means a lot.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 511,
+  "fields": {
+    "uuid": "tcFBIm3gyd",
+    "content": "What's brown and sticky? A stick.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 512,
+  "fields": {
+    "uuid": "tkji39992Ed",
+    "content": "What biscuit does a short person like? Shortbread. ",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 513,
+  "fields": {
+    "uuid": "trc2EYT0ob",
+    "content": "The invention of the wheel was what got things rolling",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 514,
+  "fields": {
+    "uuid": "trjG61Dlqzd",
+    "content": "Why was Santa's little helper feeling depressed? Because he has low elf esteem.\n",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 515,
+  "fields": {
+    "uuid": "tzsc2wHlykb",
+    "content": "Q: What\u2019s 50 Cent\u2019s name in Zimbabwe? A: 200 Dollars.\n",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 516,
+  "fields": {
+    "uuid": "u4Tvkba21wc",
+    "content": "Why did Sweden start painting barcodes on the sides of their battleships? So they could Scandinavian.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 517,
+  "fields": {
+    "uuid": "uPu4MRZLmrc",
+    "content": "Want to hear a chimney joke? Got stacks of em! First one's on the house",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 518,
+  "fields": {
+    "uuid": "ucapjGQZTf",
+    "content": "What do you call a pig that knows karate? A pork chop!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 519,
+  "fields": {
+    "uuid": "ucxPZDAlGlb",
+    "content": "If two vegans are having an argument, is it still considered beef?",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 520,
+  "fields": {
+    "uuid": "ukOCYoWDQuc",
+    "content": "My sea sickness comes in waves.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 521,
+  "fields": {
+    "uuid": "usWLJeaUvc",
+    "content": "For Valentine's day, I decided to get my wife some beads for an abacus.  It's the little things that count.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 522,
+  "fields": {
+    "uuid": "usrcaMuszd",
+    "content": "What's the worst thing about ancient history class? The teachers tend to Babylon.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 523,
+  "fields": {
+    "uuid": "uszdNZ8MRCd",
+    "content": "My new thesaurus is terrible. In fact, it's so bad, I'd say it's terrible.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 524,
+  "fields": {
+    "uuid": "v4wAlO7USf",
+    "content": "What type of music do balloons hate? Pop music!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 525,
+  "fields": {
+    "uuid": "vPmy5EtPKuc",
+    "content": "Do you want a brief explanation of what an acorn is? In a nutshell, it's an oak tree.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 526,
+  "fields": {
+    "uuid": "vPuzAd299pb",
+    "content": "How come a man driving a train got struck by lightning? He was a good conductor.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 527,
+  "fields": {
+    "uuid": "vPuzPfqOKe",
+    "content": "Camping is intense.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 528,
+  "fields": {
+    "uuid": "vX8MeFdUDlb",
+    "content": "Dad died because he couldn't remember his blood type. I will never forget his last words. Be positive.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 529,
+  "fields": {
+    "uuid": "vXgNZ0wcxAd",
+    "content": "I\u2019m on a whiskey diet. I\u2019ve lost three days already.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 530,
+  "fields": {
+    "uuid": "vk31LJB5Elb",
+    "content": "Why didn\u2019t the orange win the race? It ran out of juice.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 531,
+  "fields": {
+    "uuid": "vkV0L6wcFlb",
+    "content": "Did you hear about the runner who was criticized? He just took it in stride",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 532,
+  "fields": {
+    "uuid": "wA5wX0wXLmb",
+    "content": "What animal is always at a game of cricket? A bat.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 533,
+  "fields": {
+    "uuid": "wHJtHeFY8h",
+    "content": "Why did the Clydesdale give the pony a glass of water? \u2028Because he was a little horse!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 534,
+  "fields": {
+    "uuid": "wX0gNuXgVnb",
+    "content": "What did the Buffalo say to his little boy when he dropped him off at school? Bison.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 535,
+  "fields": {
+    "uuid": "wXDIB5h3wc",
+    "content": "I used to have a job at a calendar factory but I got the sack because I took a couple of days off.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 536,
+  "fields": {
+    "uuid": "wcxHJBl3gFd",
+    "content": "I am terrified of elevators. I\u2019m going to start taking steps to avoid them.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 537,
+  "fields": {
+    "uuid": "wcxPRu41wc",
+    "content": "Why do bees have sticky hair? Because they use honey combs!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 538,
+  "fields": {
+    "uuid": "wsPKZozsc",
+    "content": "Did you know you should always take an extra pair of pants golfing? Just in case you get a hole in one.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 539,
+  "fields": {
+    "uuid": "x5M799Ufib",
+    "content": "I wish I could clean mirrors for a living. It's just something I can see myself doing.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 540,
+  "fields": {
+    "uuid": "xAlOZ8pOmjb",
+    "content": "How do the trees get on the internet? They log on.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 541,
+  "fields": {
+    "uuid": "xHQucUvszd",
+    "content": "To the guy who invented zero... thanks for nothing.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 542,
+  "fields": {
+    "uuid": "xHY8xsHYTnb",
+    "content": "What lies at the bottom of the ocean and twitches? A nervous wreck.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 543,
+  "fields": {
+    "uuid": "xXSv492wPmb",
+    "content": "What is red and smells like blue paint?\r\nRed paint!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 544,
+  "fields": {
+    "uuid": "xXg3LZLZDd",
+    "content": "*Reversing the car* \"Ah, this takes me back\"",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 545,
+  "fields": {
+    "uuid": "xXgyXvXgFlb",
+    "content": "Doctor you've got to help me, I'm addicted to Twitter. Doctor: I don't follow you.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 546,
+  "fields": {
+    "uuid": "xXvzXga21wc",
+    "content": "How do locomotives know where they're going? Lots of training",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 547,
+  "fields": {
+    "uuid": "xc21Lmbxcib",
+    "content": "How did the hipster burn the roof of his mouth? He ate the pizza before it was cool.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 548,
+  "fields": {
+    "uuid": "xcFBQClq4wc",
+    "content": "A butcher accidentally backed into his meat grinder and got a little behind in his work that day.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 549,
+  "fields": {
+    "uuid": "xkGB5oWSKmb",
+    "content": "Did you hear about the new restaurant on the moon? The food is great, but there\u2019s just no atmosphere.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 550,
+  "fields": {
+    "uuid": "xs4o49hF6pb",
+    "content": "What kind of pants do ghosts wear? Boo jeans.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 551,
+  "fields": {
+    "uuid": "xscaxH6M7h",
+    "content": "Two guys walked into a bar, the third one ducked.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 552,
+  "fields": {
+    "uuid": "y59pGlbhyAd",
+    "content": "I really want to buy one of those supermarket checkout dividers, but the cashier keeps putting it back.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 553,
+  "fields": {
+    "uuid": "yItzAdUKBd",
+    "content": "A horse walks into a bar. The bar tender says \"Hey.\" The horse says \"Sure.\"",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 554,
+  "fields": {
+    "uuid": "yP7MRucFQCd",
+    "content": "Did you hear about the guy who invented Lifesavers? They say he made a mint.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 555,
+  "fields": {
+    "uuid": "yX821Lusrrc",
+    "content": "What's the difference between a poorly dressed man on a tricycle and a well dressed man on a bicycle? Attire.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 556,
+  "fields": {
+    "uuid": "ysHQZvcpbFd",
+    "content": "\"Dad, I'm hungry.\" Hello, Hungry. I'm Dad.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 557,
+  "fields": {
+    "uuid": "zA5MJYDY0Dd",
+    "content": "I'm practicing for a bug-eating contest and I've got butterflies in my stomach.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 558,
+  "fields": {
+    "uuid": "zPRCljGQ7Ed",
+    "content": "I have the heart of a lion... and a lifetime ban from the San Diego Zoo.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 559,
+  "fields": {
+    "uuid": "zPZ0TClqrc",
+    "content": "What do you call a guy lying on your doorstep? Matt.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 560,
+  "fields": {
+    "uuid": "zdpjyXnjbFd",
+    "content": "I met this girl on a dating site and, I don't know, we just clicked.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 561,
+  "fields": {
+    "uuid": "zkO7wHJmrc",
+    "content": "What did the calculator say to the student? You can count on me.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 562,
+  "fields": {
+    "uuid": "zkysrzkVfqc",
+    "content": "What do you call a gorilla wearing headphones? Anything you'd like, it can't hear you.",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 563,
+  "fields": {
+    "uuid": "zsHBljyk3wc",
+    "content": "Have you heard about corduroy pillows?  They're making headlines!",
+    "data_source": 1,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 564,
+  "fields": {
+    "uuid": "0ae0b938-709c-11e9-9ee0-0242ac110003",
+    "content": "Dad, did you get a haircut? No I got them all cut.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 565,
+  "fields": {
+    "uuid": "0ae1dd65-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call a Mexican who has lost his car? Carlos.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 566,
+  "fields": {
+    "uuid": "0ae2297a-709c-11e9-9ee0-0242ac110003",
+    "content": "Dad, can you put my shoes on? No, I don\u2019t think they\u2019ll fit me.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 567,
+  "fields": {
+    "uuid": "0ae24845-709c-11e9-9ee0-0242ac110003",
+    "content": "Can I watch the TV? Dad: Yes, but don\u2019t turn it on.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 568,
+  "fields": {
+    "uuid": "0ae285f6-709c-11e9-9ee0-0242ac110003",
+    "content": "I would avoid the sushi if I was you. It\u2019s a little fishy.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 569,
+  "fields": {
+    "uuid": "0ae2a016-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call a fake noodle? An Impasta.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 570,
+  "fields": {
+    "uuid": "0ae2c10c-709c-11e9-9ee0-0242ac110003",
+    "content": "You know, people say they pick their nose, but I feel like I was just born with mine.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 571,
+  "fields": {
+    "uuid": "0ae2c3bb-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cEvery time I hurt myself, even to this day, my dad says, \u2018The good news is..it\u2019ll feel better when it quits hurting.'\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 572,
+  "fields": {
+    "uuid": "0ae2c5e9-709c-11e9-9ee0-0242ac110003",
+    "content": "What\u2019s brown and sticky? A stick.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 573,
+  "fields": {
+    "uuid": "0ae2e43f-709c-11e9-9ee0-0242ac110003",
+    "content": "Want to hear a joke about paper? Nevermind it\u2019s tearable.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 574,
+  "fields": {
+    "uuid": "0ae3060f-709c-11e9-9ee0-0242ac110003",
+    "content": "Did you hear about the restaurant on the moon? Great food, no atmosphere.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 575,
+  "fields": {
+    "uuid": "0ae309ab-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cI\u2019ll call you later!\u201d- \u201cPlease don\u2019t do that. I\u2019ve always asked you to call me Dad!\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 576,
+  "fields": {
+    "uuid": "0ae3286f-709c-11e9-9ee0-0242ac110003",
+    "content": "Q: Why did the cookie cry? A: Because his father was a wafer so long!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 577,
+  "fields": {
+    "uuid": "0ae34466-709c-11e9-9ee0-0242ac110003",
+    "content": "What did the mountain climber name his son? Cliff.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 578,
+  "fields": {
+    "uuid": "0ae3611a-709c-11e9-9ee0-0242ac110003",
+    "content": "This graveyard looks overcrowded. People must be dying to get in there.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 579,
+  "fields": {
+    "uuid": "0ae363cb-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cMy dad literally told me this one last week: \u2018Did you hear about the guy who invented Lifesavers? They say he made a mint.\u2019\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 580,
+  "fields": {
+    "uuid": "0ae39d13-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cWhenever the cashier at the grocery store asks my dad if he would like the milk in a bag he replies, \u2018No, just leave it in the carton!\u2019\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 581,
+  "fields": {
+    "uuid": "0ae3db66-709c-11e9-9ee0-0242ac110003",
+    "content": "I got so angry the other day when I couldn\u2019t find my stress ball.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 582,
+  "fields": {
+    "uuid": "0ae3de22-709c-11e9-9ee0-0242ac110003",
+    "content": "If I had a dime for every book I\u2019ve ever read, I\u2019d say: \u201cWow, that\u2019s coincidental.\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 583,
+  "fields": {
+    "uuid": "0ae41b85-709c-11e9-9ee0-0242ac110003",
+    "content": "I\u2019m not indecisive. Unless you want me to be.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 584,
+  "fields": {
+    "uuid": "0ae43a36-709c-11e9-9ee0-0242ac110003",
+    "content": "How many apples grow on a tree? All of them.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 585,
+  "fields": {
+    "uuid": "0ae43cd3-709c-11e9-9ee0-0242ac110003",
+    "content": "How does a penguin build it\u2019s house? Igloos it together.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 586,
+  "fields": {
+    "uuid": "0ae43f0a-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cMe: \u2018Dad, make me a sandwich!\u2019 Dad: \u2018Poof, You\u2019re a sandwich!\u2019\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 587,
+  "fields": {
+    "uuid": "0ae5b377-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cI heard there was a new store called Moderation. They have everything there",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 588,
+  "fields": {
+    "uuid": "0ae5b81b-709c-11e9-9ee0-0242ac110003",
+    "content": "A steak pun is a rare medium well done.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 589,
+  "fields": {
+    "uuid": "0ae5bea5-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cHow can you tell if a ant is a boy or a girl? They\u2019re all girls, otherwise they\u2019d be uncles.\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 590,
+  "fields": {
+    "uuid": "0ae5c03e-709c-11e9-9ee0-0242ac110003",
+    "content": "Milk is also the fastest liquid on earth \u2013 its pasteurized before you even see it",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 591,
+  "fields": {
+    "uuid": "0ae5c1a9-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cWhat\u2019s Forrest Gump\u2019s password? 1forrest1\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 592,
+  "fields": {
+    "uuid": "0ae5c321-709c-11e9-9ee0-0242ac110003",
+    "content": "The only thing worse than having diarrhea is having to spell it.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 593,
+  "fields": {
+    "uuid": "0ae5dcdd-709c-11e9-9ee0-0242ac110003",
+    "content": "I asked my friend to help me with a math problem. He said: \u201cDon\u2019t worry; this is a piece of cake.\u201d I said: \u201cNo, it\u2019s a math problem.\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 594,
+  "fields": {
+    "uuid": "0ae5f49b-709c-11e9-9ee0-0242ac110003",
+    "content": "I keep trying to lose weight, but it keeps finding me.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 595,
+  "fields": {
+    "uuid": "0ae5f764-709c-11e9-9ee0-0242ac110003",
+    "content": "I don\u2019t play soccer because I enjoy the sport. I\u2019m just doing it for kicks.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 596,
+  "fields": {
+    "uuid": "0ae5f8ea-709c-11e9-9ee0-0242ac110003",
+    "content": "Did I tell you the time I fell in love during a backflip? I was heels over head.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 597,
+  "fields": {
+    "uuid": "0ae5fa67-709c-11e9-9ee0-0242ac110003",
+    "content": "I used to work in a shoe recycling shop. It was sole destroying.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 598,
+  "fields": {
+    "uuid": "0ae5fbbc-709c-11e9-9ee0-0242ac110003",
+    "content": "Why do you never see elephants hiding in trees? Because they\u2019re so good at it.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 599,
+  "fields": {
+    "uuid": "0ae6138e-709c-11e9-9ee0-0242ac110003",
+    "content": "Where did the one-legged waitress work? IHOP!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 600,
+  "fields": {
+    "uuid": "0ae61537-709c-11e9-9ee0-0242ac110003",
+    "content": "What happened when the two antennas got married? Well, the ceremony was kinda boring, but the reception was great!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 601,
+  "fields": {
+    "uuid": "0ae616b6-709c-11e9-9ee0-0242ac110003",
+    "content": "What did one snowman say to the other one?  \u201cDo you smell carrots?\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 602,
+  "fields": {
+    "uuid": "0ae6303e-709c-11e9-9ee0-0242ac110003",
+    "content": "How do you make a tissue dance?  You put a little boogie in it!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 603,
+  "fields": {
+    "uuid": "0ae631dc-709c-11e9-9ee0-0242ac110003",
+    "content": "Why did the blonde stare at the orange juice container?  It said concentrate!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 604,
+  "fields": {
+    "uuid": "0ae64dda-709c-11e9-9ee0-0242ac110003",
+    "content": "If your nose runs and your feet smell, you are built upside down!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 605,
+  "fields": {
+    "uuid": "0ae66b09-709c-11e9-9ee0-0242ac110003",
+    "content": "I went to buy some camouflage trousers the other day, but I couldn\u2019t find any.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 606,
+  "fields": {
+    "uuid": "0ae66caf-709c-11e9-9ee0-0242ac110003",
+    "content": "Q: How do you organize an outer space party? A: You planet.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 607,
+  "fields": {
+    "uuid": "0ae68b1c-709c-11e9-9ee0-0242ac110003",
+    "content": "Q: What do you call a belt with a watch on it?A: A waist of time.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 608,
+  "fields": {
+    "uuid": "0ae68ca9-709c-11e9-9ee0-0242ac110003",
+    "content": "What kind of shoes does a thief wear? Sneakers",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 609,
+  "fields": {
+    "uuid": "0ae68e1b-709c-11e9-9ee0-0242ac110003",
+    "content": "A jumper cable walks into a bar. The bartender says, \u201cI\u2019ll serve you, but don\u2019t start anything.\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 610,
+  "fields": {
+    "uuid": "0ae68f7b-709c-11e9-9ee0-0242ac110003",
+    "content": "An invisible man marries an invisible woman. The kids were nothing to look at either.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 611,
+  "fields": {
+    "uuid": "0ae690e7-709c-11e9-9ee0-0242ac110003",
+    "content": "I went to a seafood disco last week\u2026 and pulled a mussel.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 612,
+  "fields": {
+    "uuid": "0ae6a8b8-709c-11e9-9ee0-0242ac110003",
+    "content": "Did you hear about the man who stole a calendar? He got 12 months.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 613,
+  "fields": {
+    "uuid": "0ae6cb7d-709c-11e9-9ee0-0242ac110003",
+    "content": "A man woke up in a hospital after a serious accident. He shouted, Doctor, doctor, I can\u2019t feel my legs!\u201d The doctor replied, \u201cI know you can\u2019t I\u2019ve cut off your arms!\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 614,
+  "fields": {
+    "uuid": "0ae6cd28-709c-11e9-9ee0-0242ac110003",
+    "content": "Do you know where you can get chicken broth in bulk? The stock market.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 615,
+  "fields": {
+    "uuid": "0ae6ce45-709c-11e9-9ee0-0242ac110003",
+    "content": "What did the ocean say to the shore? Nothing, it just waved.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 616,
+  "fields": {
+    "uuid": "0ae6cfb3-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cWhat\u2019s ET short for? Because he\u2019s only got little legs.\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 617,
+  "fields": {
+    "uuid": "0ae6e517-709c-11e9-9ee0-0242ac110003",
+    "content": "Why do crabs never give to charity? Because they\u2019re shellfish.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 618,
+  "fields": {
+    "uuid": "0ae6e70e-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call an Argentinian with a rubber toe? Roberto",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 619,
+  "fields": {
+    "uuid": "0ae6ece2-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cWhat do you call a man with no nose and no body? Nobody nose.\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 620,
+  "fields": {
+    "uuid": "0ae6ee43-709c-11e9-9ee0-0242ac110003",
+    "content": "I cut my finger chopping cheese, but I think that I may have greater problems.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 621,
+  "fields": {
+    "uuid": "0ae6ef9e-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call a fish with no eyes? A fshhhh.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 622,
+  "fields": {
+    "uuid": "0ae6f1a6-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cWhat do you call a man with no arms and no legs lying in front of your door? Matt.\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 623,
+  "fields": {
+    "uuid": "0ae6f30d-709c-11e9-9ee0-0242ac110003",
+    "content": "My cat was just sick on the carpet, I don\u2019t think it\u2019s feline well.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 624,
+  "fields": {
+    "uuid": "0ae6f46a-709c-11e9-9ee0-0242ac110003",
+    "content": "I dreamed about drowning in an ocean made out of orange soda last night. It took me a while to work out it was just a Fanta sea.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 625,
+  "fields": {
+    "uuid": "0ae6f5dc-709c-11e9-9ee0-0242ac110003",
+    "content": "Without geometry life is pointless.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 626,
+  "fields": {
+    "uuid": "0ae6f81c-709c-11e9-9ee0-0242ac110003",
+    "content": "A termite walks into a bar and asks \u201cIs the bar tender here?\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 627,
+  "fields": {
+    "uuid": "0ae70ec2-709c-11e9-9ee0-0242ac110003",
+    "content": "I gave all my dead batteries away today\u2026 Free of charge.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 628,
+  "fields": {
+    "uuid": "0ae71114-709c-11e9-9ee0-0242ac110003",
+    "content": "I needed a password eight characters long so I picked Snow White and the Seven Dwarfs.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 629,
+  "fields": {
+    "uuid": "0ae71285-709c-11e9-9ee0-0242ac110003",
+    "content": "I am terrified of elevators. I\u2019m going to start taking steps to avoid them.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 630,
+  "fields": {
+    "uuid": "0ae713f7-709c-11e9-9ee0-0242ac110003",
+    "content": "What\u2019s the advantage of living in Switzerland? Well, the flag is a big plus.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 631,
+  "fields": {
+    "uuid": "0ae7154e-709c-11e9-9ee0-0242ac110003",
+    "content": "Why did the octopus beat the shark in a fight? Because it was well armed.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 632,
+  "fields": {
+    "uuid": "0ae716b9-709c-11e9-9ee0-0242ac110003",
+    "content": "A red and a blue ship have just collided in the Caribbean. Apparently the survivors are marooned.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 633,
+  "fields": {
+    "uuid": "0ae71887-709c-11e9-9ee0-0242ac110003",
+    "content": "I\u2019ve deleted the phone numbers of all the Germans I know from my mobile phone. Now it\u2019s Hans free.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 634,
+  "fields": {
+    "uuid": "0ae719ec-709c-11e9-9ee0-0242ac110003",
+    "content": "Last night me and my girlfriend watched three DVDs back to back. Luckily I was the one facing the TV.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 635,
+  "fields": {
+    "uuid": "0ae73223-709c-11e9-9ee0-0242ac110003",
+    "content": "Q: What did daddy spider say to baby spider? A: You spend too much time on the web.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 636,
+  "fields": {
+    "uuid": "0ae7465b-709c-11e9-9ee0-0242ac110003",
+    "content": "How much does a hipster weigh? An instagram.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 637,
+  "fields": {
+    "uuid": "0ae747f1-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call a group of killer whales playing instruments? An Orca-stra.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 638,
+  "fields": {
+    "uuid": "0ae75c1f-709c-11e9-9ee0-0242ac110003",
+    "content": "Why was the big cat disqualified from the race? Because it was a cheetah.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 639,
+  "fields": {
+    "uuid": "0ae77172-709c-11e9-9ee0-0242ac110003",
+    "content": "Bicycles can\u2019t stand on their own, they\u2019re two tired.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 640,
+  "fields": {
+    "uuid": "0ae77376-709c-11e9-9ee0-0242ac110003",
+    "content": "Just watched a documentary about beavers\u2026 It was the best damn program I\u2019ve ever seen.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 641,
+  "fields": {
+    "uuid": "0ae7768e-709c-11e9-9ee0-0242ac110003",
+    "content": "Breaking news! Energizer Bunny arrested \u2013 charged with battery",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 642,
+  "fields": {
+    "uuid": "0ae7794e-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cHow do you make holy water? You boil the hell out of it.\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 643,
+  "fields": {
+    "uuid": "0ae78dea-709c-11e9-9ee0-0242ac110003",
+    "content": "A Sandwich walks into a bar, the bartender says \u201cSorry, we don\u2019t serve food here\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 644,
+  "fields": {
+    "uuid": "0ae78f89-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cDoctor, I\u2019ve broken my arm in several places\u201d Doctor \u201cWell don\u2019t go to those places.\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 645,
+  "fields": {
+    "uuid": "0ae790f6-709c-11e9-9ee0-0242ac110003",
+    "content": "I\u2019m on a whiskey diet. I\u2019ve lost three days already.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 646,
+  "fields": {
+    "uuid": "0ae7ab69-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cWhy did the Clydesdale give the pony a glass of water? \u2028Because he was a little horse!\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 647,
+  "fields": {
+    "uuid": "0ae7d7fd-709c-11e9-9ee0-0242ac110003",
+    "content": "There\u2019s a new type of broom out, it\u2019s sweeping the nation.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 648,
+  "fields": {
+    "uuid": "0ae7eac1-709c-11e9-9ee0-0242ac110003",
+    "content": "Atheism is a non-prophet organisation.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 649,
+  "fields": {
+    "uuid": "0ae7f21b-709c-11e9-9ee0-0242ac110003",
+    "content": "Slept like a log last night \u2026 woke up in the fireplace.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 650,
+  "fields": {
+    "uuid": "0ae7f8cc-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cWe were getting fast food when the lady at the window said, \u2018Any condiments?\u2019 My dad responded, \u2018Compliments? You look very nice today!\u2019\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 651,
+  "fields": {
+    "uuid": "0ae81f8c-709c-11e9-9ee0-0242ac110003",
+    "content": "What cheese can never be yours? Nacho cheese.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 652,
+  "fields": {
+    "uuid": "0ae82134-709c-11e9-9ee0-0242ac110003",
+    "content": "A police officer caught two kids playing with a firework and a car battery. He charged one and let the other one off.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 653,
+  "fields": {
+    "uuid": "0ae821fd-709c-11e9-9ee0-0242ac110003",
+    "content": "I\u2019m reading a book on the history of glue \u2013 can\u2019t put it down.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 654,
+  "fields": {
+    "uuid": "0ae8236e-709c-11e9-9ee0-0242ac110003",
+    "content": "Did you hear about the kidnapping at school? It\u2019s fine, he woke up.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 655,
+  "fields": {
+    "uuid": "0ae82429-709c-11e9-9ee0-0242ac110003",
+    "content": "I went to the zoo the other day, there was only one dog in it. It was a shitzu.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 656,
+  "fields": {
+    "uuid": "0ae8258e-709c-11e9-9ee0-0242ac110003",
+    "content": "What did the daddy tomato say to the baby tomato? A: catch up!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 657,
+  "fields": {
+    "uuid": "0aebdf53-709c-11e9-9ee0-0242ac110003",
+    "content": "Q: What\u2019s 50 Cent\u2019s name in Zimbabwe? A: 400 Million Dollars.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 658,
+  "fields": {
+    "uuid": "0aebe0ae-709c-11e9-9ee0-0242ac110003",
+    "content": "Q: What did baby corn say to mama corn? A: Where\u2019s popcorn?",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 659,
+  "fields": {
+    "uuid": "0aebe178-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call a cow with no legs? Ground beef.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 660,
+  "fields": {
+    "uuid": "0aebe23b-709c-11e9-9ee0-0242ac110003",
+    "content": "What did the Buffalo say to his little boy when he dropped him off at school? Bison.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 661,
+  "fields": {
+    "uuid": "0aebe2fa-709c-11e9-9ee0-0242ac110003",
+    "content": "So a duck walks into a pharmacy and says \u201cGive me some chap-stick\u2026 and put it on my bill\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 662,
+  "fields": {
+    "uuid": "0aebe42e-709c-11e9-9ee0-0242ac110003",
+    "content": "Why did the scarecrow win an award? Because he was outstanding in his field.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 663,
+  "fields": {
+    "uuid": "0aebe4e6-709c-11e9-9ee0-0242ac110003",
+    "content": "Why did the girl smear peanut butter on the road? To go with the traffic jam.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 664,
+  "fields": {
+    "uuid": "0aebe598-709c-11e9-9ee0-0242ac110003",
+    "content": "Why does a chicken coop only have two doors? Because if it had four doors it would be a chicken sedan.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 665,
+  "fields": {
+    "uuid": "0aebe657-709c-11e9-9ee0-0242ac110003",
+    "content": "Why don\u2019t seagulls fly over the bay? Because then they\u2019d be bay-gulls!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 666,
+  "fields": {
+    "uuid": "0aebe710-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cTwo peanuts were walking down the street. One was a salted.\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 667,
+  "fields": {
+    "uuid": "0aebe7c7-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you do when a blonde throws a grenade at you? Pull the pin and throw it back.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 668,
+  "fields": {
+    "uuid": "0aebe879-709c-11e9-9ee0-0242ac110003",
+    "content": "How do you make a hankie dance? Put a little boogie in it.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 669,
+  "fields": {
+    "uuid": "0aebe935-709c-11e9-9ee0-0242ac110003",
+    "content": "Where does batman go to the bathroom? The batroom.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 670,
+  "fields": {
+    "uuid": "0aebefb0-709c-11e9-9ee0-0242ac110003",
+    "content": "What\u2019s the difference between an African elephant and an Indian elephant? About 5000 miles",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 671,
+  "fields": {
+    "uuid": "0aebf06e-709c-11e9-9ee0-0242ac110003",
+    "content": "I\u2019m on a seafood diet\u2026 I see food and I eat it.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 672,
+  "fields": {
+    "uuid": "0aebf120-709c-11e9-9ee0-0242ac110003",
+    "content": "A man walks into a bar and orders helicopter flavor chips. The barman replies \u201csorry mate we only do plain\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 673,
+  "fields": {
+    "uuid": "0aebf1da-709c-11e9-9ee0-0242ac110003",
+    "content": "Commissar! Commissar! The troops are revolting! Commissar: Well, you\u2019re pretty repulsive yourself.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 674,
+  "fields": {
+    "uuid": "0aebf291-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call a sheep with no legs? A cloud.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 675,
+  "fields": {
+    "uuid": "0aebf347-709c-11e9-9ee0-0242ac110003",
+    "content": "I knew I shouldn\u2019t have ate that seafood. Because now I\u2019m feeling a little\u2026 Eel",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 676,
+  "fields": {
+    "uuid": "0aec0ba1-709c-11e9-9ee0-0242ac110003",
+    "content": "What did the 0 say to the 8? Nice belt.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 677,
+  "fields": {
+    "uuid": "0aec0ca7-709c-11e9-9ee0-0242ac110003",
+    "content": "Why are skeletons so calm? Because nothing gets under their skin.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 678,
+  "fields": {
+    "uuid": "0aec0d65-709c-11e9-9ee0-0242ac110003",
+    "content": "Why don\u2019t skeletons ever go trick or treating? Because they have nobody to go with.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 679,
+  "fields": {
+    "uuid": "0aec0f98-709c-11e9-9ee0-0242ac110003",
+    "content": "Why do scuba divers fall backwards into the water? Because if they fell forwards they\u2019d still be in the boat.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 680,
+  "fields": {
+    "uuid": "0aec1238-709c-11e9-9ee0-0242ac110003",
+    "content": "Have you ever heard of a music group called Cellophane? They mostly wrap.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 681,
+  "fields": {
+    "uuid": "0aec12ed-709c-11e9-9ee0-0242ac110003",
+    "content": "What kind of magic do cows believe in? MOODOO.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 682,
+  "fields": {
+    "uuid": "0aec14e4-709c-11e9-9ee0-0242ac110003",
+    "content": "Why does Superman gets invited to dinners? Because he is a Supperhero.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 683,
+  "fields": {
+    "uuid": "0aec15b8-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cHold on, I have something in my shoe\u201d  \u201cI\u2019m pretty sure it\u2019s a foot\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 684,
+  "fields": {
+    "uuid": "0aec1669-709c-11e9-9ee0-0242ac110003",
+    "content": "Dad I\u2019m hungry \u2026 \u201cHi hungry\u201d I\u2019m dad",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 685,
+  "fields": {
+    "uuid": "0aec173c-709c-11e9-9ee0-0242ac110003",
+    "content": "When phone ringing Dad says \u2018If it\u2019s for me don\u2019t answer it.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 686,
+  "fields": {
+    "uuid": "0aec19a8-709c-11e9-9ee0-0242ac110003",
+    "content": "\u201cI asked my dad for his best dad joke and he said, \u2018You.\u2019\u201d",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 687,
+  "fields": {
+    "uuid": "0aec1aa4-709c-11e9-9ee0-0242ac110003",
+    "content": "Where\u2019s the bin? Dad: I haven\u2019t been anywhere!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 688,
+  "fields": {
+    "uuid": "0aec1b4a-709c-11e9-9ee0-0242ac110003",
+    "content": "What did the egg say to the boiling water? It'll be a minute before I get hard. I just got laid by a chick.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 689,
+  "fields": {
+    "uuid": "0aec1da3-709c-11e9-9ee0-0242ac110003",
+    "content": "What did one eye say to the other eye? Between you and me man, something smells.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 690,
+  "fields": {
+    "uuid": "0aec1e5e-709c-11e9-9ee0-0242ac110003",
+    "content": "Is the pool safe for diving? It deep ends!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 691,
+  "fields": {
+    "uuid": "0aec1f79-709c-11e9-9ee0-0242ac110003",
+    "content": "I hate jokes about German sausage... ...they're the WURST!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 692,
+  "fields": {
+    "uuid": "0aec201f-709c-11e9-9ee0-0242ac110003",
+    "content": "Why did the scarecrow win an award? Because he was outstanding in his field!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 693,
+  "fields": {
+    "uuid": "0aecb648-709c-11e9-9ee0-0242ac110003",
+    "content": "Where do you learn to make ice-cream? Sundae School!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 694,
+  "fields": {
+    "uuid": "0aecb751-709c-11e9-9ee0-0242ac110003",
+    "content": "How do you make a tissue dance? Put a little boogy in it!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 695,
+  "fields": {
+    "uuid": "0aecb805-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call a pony with a sore throat? A little hoarse!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 696,
+  "fields": {
+    "uuid": "0aecb8b2-709c-11e9-9ee0-0242ac110003",
+    "content": "Why don't crabs give to charity? They're a little shellfish!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 697,
+  "fields": {
+    "uuid": "0aecb95d-709c-11e9-9ee0-0242ac110003",
+    "content": "What does an annoying pepper do? It gets jalepeno face!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 698,
+  "fields": {
+    "uuid": "0aecba01-709c-11e9-9ee0-0242ac110003",
+    "content": "I would like to give a shoutout to all the sidewalks... ...for keeping me off the streets!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 699,
+  "fields": {
+    "uuid": "0aecbaa7-709c-11e9-9ee0-0242ac110003",
+    "content": "I'm taking my cat to the vet... ...he's not feline well.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 700,
+  "fields": {
+    "uuid": "0aecbb52-709c-11e9-9ee0-0242ac110003",
+    "content": "I used to hate facial hair... ...but then it grew on me!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 701,
+  "fields": {
+    "uuid": "0aecbbfa-709c-11e9-9ee0-0242ac110003",
+    "content": "How can you tell a snow man from a snow woman? Snow men have snow balls!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 702,
+  "fields": {
+    "uuid": "0aecbca0-709c-11e9-9ee0-0242ac110003",
+    "content": "Want to hear a joke about paper? Nevermind, it's tearable!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 703,
+  "fields": {
+    "uuid": "0aecbd46-709c-11e9-9ee0-0242ac110003",
+    "content": "What's brown and sticky? A stick!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 704,
+  "fields": {
+    "uuid": "0aecbdea-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call a cow with no legs? Ground Beef!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 705,
+  "fields": {
+    "uuid": "0aecbe92-709c-11e9-9ee0-0242ac110003",
+    "content": "Where did the one-legged waitress work? IHOP!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 706,
+  "fields": {
+    "uuid": "0aecbf34-709c-11e9-9ee0-0242ac110003",
+    "content": "Did you hear about the kidnapping at school? It's fine. He woke up!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 707,
+  "fields": {
+    "uuid": "0aecc05c-709c-11e9-9ee0-0242ac110003",
+    "content": "Did you hear about the man that stole the calendar? He got 12 months!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 708,
+  "fields": {
+    "uuid": "0aecc105-709c-11e9-9ee0-0242ac110003",
+    "content": "Where do cats go on vacation? Meowami!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 709,
+  "fields": {
+    "uuid": "0aecc1ac-709c-11e9-9ee0-0242ac110003",
+    "content": "Why was the big cat disqualified from the race? He was a cheetah!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 710,
+  "fields": {
+    "uuid": "0aecc253-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call a fake noodle? An impasta!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 711,
+  "fields": {
+    "uuid": "0aecc2fa-709c-11e9-9ee0-0242ac110003",
+    "content": "Did you hear about the restaurant on the moon? Great food, no atmosphere!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 712,
+  "fields": {
+    "uuid": "0aecc3a3-709c-11e9-9ee0-0242ac110003",
+    "content": "How many apples grow on a tree? All of them.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 713,
+  "fields": {
+    "uuid": "0aecc44c-709c-11e9-9ee0-0242ac110003",
+    "content": "What did the buffalo say to the little boy when he dropped him off at school? Bison!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 714,
+  "fields": {
+    "uuid": "0aecc4f2-709c-11e9-9ee0-0242ac110003",
+    "content": "What time did the man go to the dentist? Tooth hurt-y!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 715,
+  "fields": {
+    "uuid": "0aecc597-709c-11e9-9ee0-0242ac110003",
+    "content": "I'm reading a book about anti-gravity... ...it's impossible to put down!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 716,
+  "fields": {
+    "uuid": "0aecc63e-709c-11e9-9ee0-0242ac110003",
+    "content": "Did you know the first French fries weren't actually cooked in France? They were cooked in Greece!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 717,
+  "fields": {
+    "uuid": "0aecc6e5-709c-11e9-9ee0-0242ac110003",
+    "content": "I just watched a documentary about beavers... ...it was the best dam show I ever saw!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 718,
+  "fields": {
+    "uuid": "0aecc789-709c-11e9-9ee0-0242ac110003",
+    "content": "Why do chicken coops only have two doors? Because if they had four, they would be chicken sedans!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 719,
+  "fields": {
+    "uuid": "0aecc82d-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call a factory that sells passable products? A satisfactory!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 720,
+  "fields": {
+    "uuid": "0aecc8d3-709c-11e9-9ee0-0242ac110003",
+    "content": "Two peanuts were walking down the street. One was a salted!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 721,
+  "fields": {
+    "uuid": "0aecc97b-709c-11e9-9ee0-0242ac110003",
+    "content": "Why did the invisible man turn down the job offer? He couldn't see himself doing it!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 722,
+  "fields": {
+    "uuid": "0aecca84-709c-11e9-9ee0-0242ac110003",
+    "content": "What is Forrest Gump\u2019s password? 1forrest1",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 723,
+  "fields": {
+    "uuid": "0aeccb2d-709c-11e9-9ee0-0242ac110003",
+    "content": "I used to have a job at a calendar factory... ...I got fired because I took a couple days off!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 724,
+  "fields": {
+    "uuid": "0aeccbd5-709c-11e9-9ee0-0242ac110003",
+    "content": "How do you make holy water? You boil the hell out of it!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 725,
+  "fields": {
+    "uuid": "0aeccc7c-709c-11e9-9ee0-0242ac110003",
+    "content": "A three-legged dog walks into a bar and says to the bartender... ...I\u2019m looking for the man who shot my paw!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 726,
+  "fields": {
+    "uuid": "0aeccd1e-709c-11e9-9ee0-0242ac110003",
+    "content": "I had a dream that I was a muffler last night... I woke up exhausted!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 727,
+  "fields": {
+    "uuid": "0aeccdc2-709c-11e9-9ee0-0242ac110003",
+    "content": "What did the horse say after it tripped? Help! I\u2019ve fallen and I can\u2019t giddyup!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 728,
+  "fields": {
+    "uuid": "0aecce67-709c-11e9-9ee0-0242ac110003",
+    "content": "Did you hear about the circus fire? It was in tents!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 729,
+  "fields": {
+    "uuid": "0aeccf10-709c-11e9-9ee0-0242ac110003",
+    "content": "Don't trust atoms. They make up everything!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 730,
+  "fields": {
+    "uuid": "0aeccfb4-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call a cow with two legs? Lean beef!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 731,
+  "fields": {
+    "uuid": "0aecd059-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call a cow with no legs? Ground beef!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 732,
+  "fields": {
+    "uuid": "0aecd0fd-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you get when you cross an elephant with a rhino? Elephino!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 733,
+  "fields": {
+    "uuid": "0aecd1a4-709c-11e9-9ee0-0242ac110003",
+    "content": "How many tickles does it take to make an octopus laugh? Ten-tickles!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 734,
+  "fields": {
+    "uuid": "0aecd247-709c-11e9-9ee0-0242ac110003",
+    "content": "I\u2019m only familiar with 25 letters in the English language... ...I don't know Y!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 735,
+  "fields": {
+    "uuid": "0aecd89f-709c-11e9-9ee0-0242ac110003",
+    "content": "Why couldn't the bike stand up by itself? It was two tired!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 736,
+  "fields": {
+    "uuid": "0aecd949-709c-11e9-9ee0-0242ac110003",
+    "content": "Why didn't the vampire attack Taylor Swift? She had bad blood!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 737,
+  "fields": {
+    "uuid": "0aecf3ad-709c-11e9-9ee0-0242ac110003",
+    "content": "Do you know what the loudest pet you can get is? A trumpet!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 738,
+  "fields": {
+    "uuid": "0aecf4c1-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you get when you cross a snowman with a vampire? Frostbite!",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 739,
+  "fields": {
+    "uuid": "0aecf577-709c-11e9-9ee0-0242ac110003",
+    "content": "What do you call a lonely cheese? Provalone.",
+    "data_source": 2,
+    "domain": 1
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "server",
+    "model": "datadomain"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "server",
+    "model": "datasource"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "server",
+    "model": "trainingset"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "server",
+    "model": "markovchainword"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "server",
+    "model": "generatedsentence"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add data domain",
+    "content_type": 1,
+    "codename": "add_datadomain"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change data domain",
+    "content_type": 1,
+    "codename": "change_datadomain"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete data domain",
+    "content_type": 1,
+    "codename": "delete_datadomain"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view data domain",
+    "content_type": 1,
+    "codename": "view_datadomain"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add data source",
+    "content_type": 2,
+    "codename": "add_datasource"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change data source",
+    "content_type": 2,
+    "codename": "change_datasource"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete data source",
+    "content_type": 2,
+    "codename": "delete_datasource"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view data source",
+    "content_type": 2,
+    "codename": "view_datasource"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add training set",
+    "content_type": 3,
+    "codename": "add_trainingset"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change training set",
+    "content_type": 3,
+    "codename": "change_trainingset"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete training set",
+    "content_type": 3,
+    "codename": "delete_trainingset"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view training set",
+    "content_type": 3,
+    "codename": "view_trainingset"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add markov chain word",
+    "content_type": 4,
+    "codename": "add_markovchainword"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change markov chain word",
+    "content_type": 4,
+    "codename": "change_markovchainword"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete markov chain word",
+    "content_type": 4,
+    "codename": "delete_markovchainword"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view markov chain word",
+    "content_type": 4,
+    "codename": "view_markovchainword"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add generated sentence",
+    "content_type": 5,
+    "codename": "add_generatedsentence"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change generated sentence",
+    "content_type": 5,
+    "codename": "change_generatedsentence"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete generated sentence",
+    "content_type": 5,
+    "codename": "delete_generatedsentence"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view generated sentence",
+    "content_type": 5,
+    "codename": "view_generatedsentence"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 6,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 6,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 6,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 6,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 7,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 7,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 7,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 7,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 8,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 8,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 8,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 8,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 9,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 9,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 9,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 9,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 10,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 10,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 10,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 10,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 11,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 11,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 11,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 11,
+    "codename": "view_session"
+  }
+}
 ]
