@@ -162,12 +162,12 @@ class MarkovChain:
         return pm_chain, start_words, end_words
 
     @staticmethod
-    def generate_sentence(m_chain, start_words=None, end_words=None, start_word=None, length=None):
+    def generate_sentence(m_chain, start_words=None, end_words=None, start_word=None, min_len=15, max_len=30):
         if not start_words:
             start_words = list(m_chain.keys())
 
         word = start_word if start_word else random.choice(list(start_words))
-        length = length if length else random.randrange(15, 30)
+        length = random.randrange(min_len, max_len)
 
         new_sentence = [word]
         while len(new_sentence) < length - 1:
@@ -215,7 +215,7 @@ class MarkovChain:
         :param recalculate_probabilities:
         :return:
         """
-        generated_pair = MarkovChain.generate_sentence(m_chain, length=2)
+        generated_pair = MarkovChain.generate_sentence(m_chain, max_len=2)
         print(m_chain)
         a, b = re.split(r'\s+', generated_pair)
         print(a,b)
@@ -226,7 +226,7 @@ class MarkovChain:
                 'prob': None
             }
         m_chain[a]['next_words'][choice]['weight'] += factor
-        pairs = [w.lower() for w in MarkovChain.generate_sentence(length=2)]
+        pairs = [w.lower() for w in MarkovChain.generate_sentence(max_len=2)]
         pairs = [[pairs[i], None if i == len(pairs) - 1 else pairs[i + 1]] for i
                  in range(len(pairs))][:-1]
 

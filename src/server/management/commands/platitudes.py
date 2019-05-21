@@ -13,10 +13,10 @@ class Command(BaseCommand):
             '--number',
             type=int,
             default=1,
-            help='The number of Dad Jokes to generate.')
+            help='The number of Empty Platitudes to generate.')
 
     def handle(self, *args, **kwargs):
-        domain = DataDomain.objects.get(name='dad_jokes')
+        domain = DataDomain.objects.get(name='platitudes')
         training_set = TrainingSet.objects.filter(domain=domain)
         jokes = []
         for row in training_set:
@@ -29,6 +29,10 @@ class Command(BaseCommand):
 
         sentences = []
         for i in range(kwargs['number']):
-            sentence = MarkovChain.generate_sentence(m_chain, start_words, end_words)
+            sentence = MarkovChain.generate_sentence(
+                m_chain, start_words, end_words,
+                min_len=8,
+                max_len=15
+            )
             sentences.append(sentence)
             print(sentence)
