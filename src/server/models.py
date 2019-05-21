@@ -15,6 +15,7 @@ class DataDomain(models.Model):
         Dad Jokes?
         Scientific Literature?
         Slang?
+        Trump tweets?
 
     This is not a DataSource b/c a domain can pull from several data sources.
     """
