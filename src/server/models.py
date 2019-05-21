@@ -19,7 +19,7 @@ class DataDomain(models.Model):
 
     This is not a DataSource b/c a domain can pull from several data sources.
     """
-    data_source = models.ForeignKey(DataSource, on_delete=models.CASCADE)
+    data_sources = models.ManyToManyField(DataSource)
     name = models.CharField(max_length=255, blank=False)
 
 
@@ -44,8 +44,8 @@ class MarkovChainWord(models.Model):
     next_word = models.CharField(max_length=255, blank=False)
     weight = models.FloatField(blank=False)
 
-    class Meta:
-        unique_together = ('domain', 'word', 'next_word',)
+    # class Meta:
+    #     unique_together = ('domain', 'word', 'next_word',)
 
     # def recalculate_weights(self, domain=None):
     #     pass

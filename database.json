@@ -14,11 +14,31 @@
   }
 },
 {
+  "model": "server.datasource",
+  "pk": 3,
+  "fields": {
+    "url": "platitudes manual"
+  }
+},
+{
   "model": "server.datadomain",
   "pk": 1,
   "fields": {
-    "data_source": 1,
-    "name": "dad_jokes"
+    "name": "dad_jokes",
+    "data_sources": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "server.datadomain",
+  "pk": 2,
+  "fields": {
+    "name": "platitudes",
+    "data_sources": [
+      3
+    ]
   }
 },
 {
@@ -7409,6 +7429,1036 @@
     "content": "What do you call a lonely cheese? Provalone.",
     "data_source": 2,
     "domain": 1
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 740,
+  "fields": {
+    "uuid": "094b6fa8-70f7-11e9-9ee0-0242ac110003",
+    "content": "Love conquers all.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 741,
+  "fields": {
+    "uuid": "094b88e4-70f7-11e9-9ee0-0242ac110003",
+    "content": "There\u2019s no such thing as bad timing with the right person.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 742,
+  "fields": {
+    "uuid": "094b89c0-70f7-11e9-9ee0-0242ac110003",
+    "content": "All that glitters isn\u2019t gold.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 743,
+  "fields": {
+    "uuid": "094b8a6f-70f7-11e9-9ee0-0242ac110003",
+    "content": "Don\u2019t get your panties in a twist.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 744,
+  "fields": {
+    "uuid": "094b8b00-70f7-11e9-9ee0-0242ac110003",
+    "content": "The calm before the storm.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 745,
+  "fields": {
+    "uuid": "094b8bb2-70f7-11e9-9ee0-0242ac110003",
+    "content": "Opposites attract.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 746,
+  "fields": {
+    "uuid": "094b8c76-70f7-11e9-9ee0-0242ac110003",
+    "content": "The writing\u2019s on the wall.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 747,
+  "fields": {
+    "uuid": "094b8cfa-70f7-11e9-9ee0-0242ac110003",
+    "content": "What goes around comes around.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 748,
+  "fields": {
+    "uuid": "094b8d4b-70f7-11e9-9ee0-0242ac110003",
+    "content": "It\u2019s just a matter of time.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 749,
+  "fields": {
+    "uuid": "094ba397-70f7-11e9-9ee0-0242ac110003",
+    "content": "As old as the hills.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 750,
+  "fields": {
+    "uuid": "094ba418-70f7-11e9-9ee0-0242ac110003",
+    "content": "Fit as a fiddle.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 751,
+  "fields": {
+    "uuid": "094ba4ab-70f7-11e9-9ee0-0242ac110003",
+    "content": "Without a care in the world.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 752,
+  "fields": {
+    "uuid": "094ba566-70f7-11e9-9ee0-0242ac110003",
+    "content": "A diamond in the rough.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 753,
+  "fields": {
+    "uuid": "094ba614-70f7-11e9-9ee0-0242ac110003",
+    "content": "Brave as a lion.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 754,
+  "fields": {
+    "uuid": "094ba6c0-70f7-11e9-9ee0-0242ac110003",
+    "content": "Weak as a kitten",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 755,
+  "fields": {
+    "uuid": "094ba769-70f7-11e9-9ee0-0242ac110003",
+    "content": "Had nerves of steel.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 756,
+  "fields": {
+    "uuid": "094ba832-70f7-11e9-9ee0-0242ac110003",
+    "content": "Ugly as sin.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 757,
+  "fields": {
+    "uuid": "094ba8e0-70f7-11e9-9ee0-0242ac110003",
+    "content": "All for one, and one for all.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 758,
+  "fields": {
+    "uuid": "094ba98d-70f7-11e9-9ee0-0242ac110003",
+    "content": "Let\u2019s just kiss and make up.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 759,
+  "fields": {
+    "uuid": "094baa33-70f7-11e9-9ee0-0242ac110003",
+    "content": "He has his tail between his legs.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 760,
+  "fields": {
+    "uuid": "094baab8-70f7-11e9-9ee0-0242ac110003",
+    "content": "And they all lived happily ever after.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 761,
+  "fields": {
+    "uuid": "094bab6f-70f7-11e9-9ee0-0242ac110003",
+    "content": "Read between the lines.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 762,
+  "fields": {
+    "uuid": "094bac2c-70f7-11e9-9ee0-0242ac110003",
+    "content": "Someone woke up on the wrong side of the bed.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 763,
+  "fields": {
+    "uuid": "094bacbc-70f7-11e9-9ee0-0242ac110003",
+    "content": "We\u2019re not laughing at you we\u2019re laughing with you.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 764,
+  "fields": {
+    "uuid": "094bad41-70f7-11e9-9ee0-0242ac110003",
+    "content": "There\u2019s no \u201ci\u201d in Team",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 765,
+  "fields": {
+    "uuid": "094badf6-70f7-11e9-9ee0-0242ac110003",
+    "content": "Good things come to those who wait.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 766,
+  "fields": {
+    "uuid": "094baeb7-70f7-11e9-9ee0-0242ac110003",
+    "content": "What\u2019s meant to be will be.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 767,
+  "fields": {
+    "uuid": "094bafea-70f7-11e9-9ee0-0242ac110003",
+    "content": "The definition of insanity is doing the same thing over and over again and expecting a different result.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 768,
+  "fields": {
+    "uuid": "094bb09f-70f7-11e9-9ee0-0242ac110003",
+    "content": "Time heals everything.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 769,
+  "fields": {
+    "uuid": "094bb155-70f7-11e9-9ee0-0242ac110003",
+    "content": "So it goes.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 770,
+  "fields": {
+    "uuid": "094bb202-70f7-11e9-9ee0-0242ac110003",
+    "content": "Forgive and forget.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 771,
+  "fields": {
+    "uuid": "094bb2cc-70f7-11e9-9ee0-0242ac110003",
+    "content": "Everything happens for a reason.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 772,
+  "fields": {
+    "uuid": "094bb358-70f7-11e9-9ee0-0242ac110003",
+    "content": "It is what it is.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 773,
+  "fields": {
+    "uuid": "094bb3ad-70f7-11e9-9ee0-0242ac110003",
+    "content": "What the mind can conceive, it can achieve.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 774,
+  "fields": {
+    "uuid": "094bb42d-70f7-11e9-9ee0-0242ac110003",
+    "content": "Winners never quit.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 775,
+  "fields": {
+    "uuid": "094bb4d7-70f7-11e9-9ee0-0242ac110003",
+    "content": "What doesn\u2019t you makes you stronger.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 776,
+  "fields": {
+    "uuid": "094bb566-70f7-11e9-9ee0-0242ac110003",
+    "content": "I don\u2019t want a team of champions, I want a champion team.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 777,
+  "fields": {
+    "uuid": "094bb5eb-70f7-11e9-9ee0-0242ac110003",
+    "content": "Teamwork makes the dream work.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 778,
+  "fields": {
+    "uuid": "094bb699-70f7-11e9-9ee0-0242ac110003",
+    "content": "C\u2019est la vie.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 779,
+  "fields": {
+    "uuid": "094bb757-70f7-11e9-9ee0-0242ac110003",
+    "content": "Hard work always pays off.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 780,
+  "fields": {
+    "uuid": "094bb809-70f7-11e9-9ee0-0242ac110003",
+    "content": "God has a plan.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 781,
+  "fields": {
+    "uuid": "094bb8b5-70f7-11e9-9ee0-0242ac110003",
+    "content": "Great minds think alike.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 782,
+  "fields": {
+    "uuid": "094bb968-70f7-11e9-9ee0-0242ac110003",
+    "content": "Money can\u2019t buy happiness.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 783,
+  "fields": {
+    "uuid": "094bba15-70f7-11e9-9ee0-0242ac110003",
+    "content": "Live each moment like it\u2019s your last.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 784,
+  "fields": {
+    "uuid": "094bbb2f-70f7-11e9-9ee0-0242ac110003",
+    "content": "If at first you don\u2019t succeed, try try again.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 785,
+  "fields": {
+    "uuid": "094bbbea-70f7-11e9-9ee0-0242ac110003",
+    "content": "Follow your passion.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 786,
+  "fields": {
+    "uuid": "094bbc96-70f7-11e9-9ee0-0242ac110003",
+    "content": "Follow your bliss.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 787,
+  "fields": {
+    "uuid": "094bbd43-70f7-11e9-9ee0-0242ac110003",
+    "content": "Let\u2019s not reinvent the wheel.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 788,
+  "fields": {
+    "uuid": "094bbdd1-70f7-11e9-9ee0-0242ac110003",
+    "content": "It\u2019s not rocket science.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 789,
+  "fields": {
+    "uuid": "094bbe27-70f7-11e9-9ee0-0242ac110003",
+    "content": "What goes up must come down.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 790,
+  "fields": {
+    "uuid": "094bbea6-70f7-11e9-9ee0-0242ac110003",
+    "content": "After the storm the sun will shine.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 791,
+  "fields": {
+    "uuid": "094bbf54-70f7-11e9-9ee0-0242ac110003",
+    "content": "There\u2019s always a silver lining.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 792,
+  "fields": {
+    "uuid": "094bbfe3-70f7-11e9-9ee0-0242ac110003",
+    "content": "Don\u2019t assume \u2013 it makes an ASS out of U and ME.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 793,
+  "fields": {
+    "uuid": "094bc06b-70f7-11e9-9ee0-0242ac110003",
+    "content": "Don\u2019t be sad because it\u2019s over, be glad that it happened.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 794,
+  "fields": {
+    "uuid": "094bc118-70f7-11e9-9ee0-0242ac110003",
+    "content": "Love means never having to say you\u2019re sorry.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 795,
+  "fields": {
+    "uuid": "094bc1db-70f7-11e9-9ee0-0242ac110003",
+    "content": "We are where we are",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 796,
+  "fields": {
+    "uuid": "094bc295-70f7-11e9-9ee0-0242ac110003",
+    "content": "What goes around comes around",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 797,
+  "fields": {
+    "uuid": "094bc348-70f7-11e9-9ee0-0242ac110003",
+    "content": "What\u2019s done is done",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 798,
+  "fields": {
+    "uuid": "094bc401-70f7-11e9-9ee0-0242ac110003",
+    "content": "Waste not want not",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 799,
+  "fields": {
+    "uuid": "094bc4af-70f7-11e9-9ee0-0242ac110003",
+    "content": "It has to be somewhere (as if this helps you find something that\u2019s lost)",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 800,
+  "fields": {
+    "uuid": "094bc56c-70f7-11e9-9ee0-0242ac110003",
+    "content": "Nice guys finish last",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 801,
+  "fields": {
+    "uuid": "094bc61f-70f7-11e9-9ee0-0242ac110003",
+    "content": "Go with the flow",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 802,
+  "fields": {
+    "uuid": "094bdbf4-70f7-11e9-9ee0-0242ac110003",
+    "content": "Only dead fish go with the flow.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 803,
+  "fields": {
+    "uuid": "094bdce0-70f7-11e9-9ee0-0242ac110003",
+    "content": "Rome wasn\u2019t built in a day.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 804,
+  "fields": {
+    "uuid": "094bdda2-70f7-11e9-9ee0-0242ac110003",
+    "content": "Work smarter, not harder.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 805,
+  "fields": {
+    "uuid": "094bde58-70f7-11e9-9ee0-0242ac110003",
+    "content": "When life gives you lemons, make lemonade.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 806,
+  "fields": {
+    "uuid": "094bdefa-70f7-11e9-9ee0-0242ac110003",
+    "content": "Age is just a number.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 807,
+  "fields": {
+    "uuid": "094c9df5-70f7-11e9-9ee0-0242ac110003",
+    "content": "We\u2019re all in this together.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 808,
+  "fields": {
+    "uuid": "094caa03-70f7-11e9-9ee0-0242ac110003",
+    "content": "This too shall pass.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 809,
+  "fields": {
+    "uuid": "094cab12-70f7-11e9-9ee0-0242ac110003",
+    "content": "Everything always works out in the end.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 810,
+  "fields": {
+    "uuid": "094cabee-70f7-11e9-9ee0-0242ac110003",
+    "content": "We\u2019ll all be laughing about this one day.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 811,
+  "fields": {
+    "uuid": "094cacc4-70f7-11e9-9ee0-0242ac110003",
+    "content": "It\u2019s doesn\u2019t matter if you win or lose, only that you try.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 812,
+  "fields": {
+    "uuid": "094cad91-70f7-11e9-9ee0-0242ac110003",
+    "content": "Tomorrow is another day.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 813,
+  "fields": {
+    "uuid": "094cae5f-70f7-11e9-9ee0-0242ac110003",
+    "content": "It could be worse.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 814,
+  "fields": {
+    "uuid": "094caf24-70f7-11e9-9ee0-0242ac110003",
+    "content": "You are what you eat.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 815,
+  "fields": {
+    "uuid": "094cafee-70f7-11e9-9ee0-0242ac110003",
+    "content": "It\u2019s neither here nor there.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 816,
+  "fields": {
+    "uuid": "094cb0be-70f7-11e9-9ee0-0242ac110003",
+    "content": "There\u2019s no \u201cthere\u201d there.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 817,
+  "fields": {
+    "uuid": "094cb18e-70f7-11e9-9ee0-0242ac110003",
+    "content": "Think outside the box.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 818,
+  "fields": {
+    "uuid": "094cb25b-70f7-11e9-9ee0-0242ac110003",
+    "content": "It will all look better in the morning.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 819,
+  "fields": {
+    "uuid": "094cb323-70f7-11e9-9ee0-0242ac110003",
+    "content": "There\u2019s no such thing as a free lunch.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 820,
+  "fields": {
+    "uuid": "094cb3ed-70f7-11e9-9ee0-0242ac110003",
+    "content": "Better to have loved and lost\u2026",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 821,
+  "fields": {
+    "uuid": "094cb4bb-70f7-11e9-9ee0-0242ac110003",
+    "content": "That\u2019s for me to know and you to find out.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 822,
+  "fields": {
+    "uuid": "094cb588-70f7-11e9-9ee0-0242ac110003",
+    "content": "The road to hell is paved in good intentions.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 823,
+  "fields": {
+    "uuid": "094cb657-70f7-11e9-9ee0-0242ac110003",
+    "content": "Gossip is the devil\u2019s radio.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 824,
+  "fields": {
+    "uuid": "094cb7ca-70f7-11e9-9ee0-0242ac110003",
+    "content": "Laugh and the world laughs with you.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 825,
+  "fields": {
+    "uuid": "094cb89c-70f7-11e9-9ee0-0242ac110003",
+    "content": "Beauty is only skin deep.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 826,
+  "fields": {
+    "uuid": "094cb96c-70f7-11e9-9ee0-0242ac110003",
+    "content": "Beauty is in the eye of the beholder.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 827,
+  "fields": {
+    "uuid": "094cba3c-70f7-11e9-9ee0-0242ac110003",
+    "content": "You can\u2019t judge a book by its cover.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 828,
+  "fields": {
+    "uuid": "094cbb0b-70f7-11e9-9ee0-0242ac110003",
+    "content": "Work hard, play hard.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 829,
+  "fields": {
+    "uuid": "094d45aa-70f7-11e9-9ee0-0242ac110003",
+    "content": "Only the good die young.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 830,
+  "fields": {
+    "uuid": "094d4876-70f7-11e9-9ee0-0242ac110003",
+    "content": "All\u2019s fair in love and war.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 831,
+  "fields": {
+    "uuid": "094d4a06-70f7-11e9-9ee0-0242ac110003",
+    "content": "All men are created equal.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 832,
+  "fields": {
+    "uuid": "094d4b97-70f7-11e9-9ee0-0242ac110003",
+    "content": "There are plenty more fish in the sea.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 833,
+  "fields": {
+    "uuid": "094d4d27-70f7-11e9-9ee0-0242ac110003",
+    "content": "The more things change, the more they stay the same.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 834,
+  "fields": {
+    "uuid": "094d4e9f-70f7-11e9-9ee0-0242ac110003",
+    "content": "It\u2019s the darkest just before dawn.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 835,
+  "fields": {
+    "uuid": "094d4fd9-70f7-11e9-9ee0-0242ac110003",
+    "content": "Fail harder.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 836,
+  "fields": {
+    "uuid": "094d511e-70f7-11e9-9ee0-0242ac110003",
+    "content": "Perception is reality.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 837,
+  "fields": {
+    "uuid": "094d51dd-70f7-11e9-9ee0-0242ac110003",
+    "content": "You can be anything that you want to be.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 838,
+  "fields": {
+    "uuid": "094d5295-70f7-11e9-9ee0-0242ac110003",
+    "content": "Patience is a virtue.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 839,
+  "fields": {
+    "uuid": "094d534c-70f7-11e9-9ee0-0242ac110003",
+    "content": "The customer is always right.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 840,
+  "fields": {
+    "uuid": "094d5402-70f7-11e9-9ee0-0242ac110003",
+    "content": "If you can\u2019t stand the heat, get out of the kitchen.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 841,
+  "fields": {
+    "uuid": "094d5563-70f7-11e9-9ee0-0242ac110003",
+    "content": "With great wealth / power comes great responsibility.",
+    "data_source": 3,
+    "domain": 2
+  }
+},
+{
+  "model": "server.trainingset",
+  "pk": 842,
+  "fields": {
+    "uuid": "094d5619-70f7-11e9-9ee0-0242ac110003",
+    "content": "God never gives us more than we can handle.",
+    "data_source": 3,
+    "domain": 2
   }
 },
 {

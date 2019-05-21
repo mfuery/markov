@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from server import dad_jokes
+from server.api import dad_jokes
 from server.models import DataSource, TrainingSet, DataDomain
 
 
