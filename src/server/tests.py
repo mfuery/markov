@@ -16,25 +16,25 @@ test_sentences = [
 
 def test_build_chain():
     m_chain, start_words, end_words = MarkovChain.train(test_sentences[0])
-    # print(mydict(m_chain))
+    print(mydict(m_chain))
     assert m_chain == {
         "i": {
             "next_words": {
                 "finally": {
                     "weight": 2,
-                    "prob": 0.5
+                    "prob": 0.4
                 },
                 "opened": {
                     "weight": 1,
-                    "prob": 0.25
+                    "prob": 0.2
                 },
                 "have": {
                     "weight": 1,
-                    "prob": 0.25
+                    "prob": 0.2
                 },
                 "am": {
                     "weight": 1,
-                    "prob": 0.25
+                    "prob": 0.2
                 }
             },
             "total_count": 5
@@ -43,7 +43,7 @@ def test_build_chain():
             "next_words": {
                 "bought": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -52,7 +52,7 @@ def test_build_chain():
             "next_words": {
                 "the": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -61,11 +61,11 @@ def test_build_chain():
             "next_words": {
                 "limited": {
                     "weight": 2,
-                    "prob": 1.0
+                    "prob": 0.6666666666666666
                 },
                 "pages": {
                     "weight": 1,
-                    "prob": 0.5
+                    "prob": 0.3333333333333333
                 }
             },
             "total_count": 3
@@ -74,7 +74,7 @@ def test_build_chain():
             "next_words": {
                 "edition": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -83,7 +83,7 @@ def test_build_chain():
             "next_words": {
                 "thesaurus": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -92,7 +92,7 @@ def test_build_chain():
             "next_words": {
                 "that": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -101,7 +101,7 @@ def test_build_chain():
             "next_words": {
                 "i've": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -110,7 +110,7 @@ def test_build_chain():
             "next_words": {
                 "always": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -119,7 +119,7 @@ def test_build_chain():
             "next_words": {
                 "wanted": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -128,7 +128,7 @@ def test_build_chain():
             "next_words": {
                 "when": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -137,7 +137,7 @@ def test_build_chain():
             "next_words": {
                 "i": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -146,7 +146,7 @@ def test_build_chain():
             "next_words": {
                 "it": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -155,7 +155,7 @@ def test_build_chain():
             "next_words": {
                 "all": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -164,7 +164,7 @@ def test_build_chain():
             "next_words": {
                 "the": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -173,7 +173,7 @@ def test_build_chain():
             "next_words": {
                 "were": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -182,7 +182,7 @@ def test_build_chain():
             "next_words": {
                 "blank": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -191,7 +191,7 @@ def test_build_chain():
             "next_words": {
                 "i": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -200,7 +200,7 @@ def test_build_chain():
             "next_words": {
                 "no": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -209,7 +209,7 @@ def test_build_chain():
             "next_words": {
                 "words": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -218,7 +218,7 @@ def test_build_chain():
             "next_words": {
                 "to": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -227,7 +227,7 @@ def test_build_chain():
             "next_words": {
                 "describe": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -236,7 +236,7 @@ def test_build_chain():
             "next_words": {
                 "how": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -245,7 +245,7 @@ def test_build_chain():
             "next_words": {
                 "angry": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -254,7 +254,7 @@ def test_build_chain():
             "next_words": {
                 "i": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -277,34 +277,34 @@ def test_build_chain_run_two_times():
         test_sentences[0])
     m_chain, start_words, end_words = MarkovChain.train(
         test_sentences[1], m_chain, start_words, end_words)
-    # print(mydict(m_chain), start_words, end_words)
+    print(mydict(m_chain))
 
     assert m_chain == {
         "i": {
             "next_words": {
                 "finally": {
                     "weight": 2,
-                    "prob": 0.3333333333333333
+                    "prob": 0.2857142857142857
                 },
                 "opened": {
                     "weight": 1,
-                    "prob": 0.16666666666666666
+                    "prob": 0.14285714285714285
                 },
                 "have": {
                     "weight": 1,
-                    "prob": 0.16666666666666666
+                    "prob": 0.14285714285714285
                 },
                 "am": {
                     "weight": 1,
-                    "prob": 0.16666666666666666
+                    "prob": 0.14285714285714285
                 },
                 "was": {
                     "weight": 1,
-                    "prob": 0.16666666666666666
+                    "prob": 0.14285714285714285
                 },
                 "wasn't": {
                     "weight": 1,
-                    "prob": 0.16666666666666666
+                    "prob": 0.14285714285714285
                 }
             },
             "total_count": 7
@@ -313,7 +313,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "bought": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -322,7 +322,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "the": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -331,15 +331,15 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "limited": {
                     "weight": 2,
-                    "prob": 0.6666666666666666
+                    "prob": 0.5
                 },
                 "pages": {
                     "weight": 1,
-                    "prob": 0.3333333333333333
+                    "prob": 0.25
                 },
                 "keyboard": {
                     "weight": 1,
-                    "prob": 0.3333333333333333
+                    "prob": 0.25
                 }
             },
             "total_count": 4
@@ -348,7 +348,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "edition": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -357,7 +357,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "thesaurus": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -366,7 +366,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "that": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -375,7 +375,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "i've": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -384,7 +384,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "always": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -393,7 +393,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "wanted": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -402,7 +402,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "when": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -411,7 +411,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "i": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -420,7 +420,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "it": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -429,7 +429,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "all": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -438,7 +438,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "the": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -447,7 +447,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "were": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -456,7 +456,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "blank": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -465,7 +465,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "i": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -474,7 +474,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "no": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -483,7 +483,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "words": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -492,7 +492,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "to": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -501,7 +501,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "describe": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -510,7 +510,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "how": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -519,7 +519,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "angry": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -528,7 +528,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "i": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -537,7 +537,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "fired": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -546,7 +546,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "from": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -555,7 +555,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "the": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -564,7 +564,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "factory": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -573,7 +573,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "yesterday": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -582,7 +582,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "i": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -591,7 +591,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "putting": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -600,7 +600,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "in": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -609,7 +609,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "enough": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -618,7 +618,7 @@ def test_build_chain_run_two_times():
             "next_words": {
                 "shifts": {
                     "weight": 2,
-                    "prob": 2.0
+                    "prob": 1.0
                 }
             },
             "total_count": 2
@@ -646,33 +646,46 @@ def test_generate_sentence():
         start_words,
         end_words,
         start_word='i',
-        length=10
+        min_len=10,
+        max_len=10
     )
     print(actual)
     assert len(actual.split(' ')) == 10
 
 
-# def test_apply_fitness():
-#     m_chain = {
-#         "finally": {
-#             "next_words": {
-#                 "bought": {
-#                     "weight": 1,
-#                     "prob": 1.0
-#                 },
-#             },
-#             "total_count": 1
-#         },
-#     }
-#
-#     assert MarkovChain.apply_fitness(m_chain, f=lambda a, b: 1) == {
-#         "finally": {
-#             "next_words": {
-#                 "bought": {
-#                     "weight": 2,
-#                     "prob": 1.0
-#                 },
-#             },
-#             "total_count": 1
-#         },
-#     }
+def test_apply_fitness():
+    m_chain = {
+        "finally": {
+            "next_words": {
+                "bought": {
+                    "weight": 1,
+                    "prob": 1.0
+                },
+            },
+            "total_count": 1
+        },
+    }
+
+    def f(a, b):
+        return len(set([c for c in a + b])) / len(a + b)
+
+    assert MarkovChain.apply_fitness(m_chain, f) == {
+        "finally": {
+            "next_words": {
+                "bought": {
+                    "weight": 2,
+                    "prob": 1.0
+                },
+            },
+            "total_count": 1
+        },
+        "bought": {
+            "next_words": {
+                "the": {
+                    "weight": 2,
+                    "prob": 1.0
+                }
+            },
+            "total_count": 2
+        },
+    }

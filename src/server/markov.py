@@ -55,6 +55,7 @@ class FitnessFn:
 
 
 class MarkovChain:
+    SANITIZE_RE = r"[^a-zA-Z0-9']*"
     PUNCTUATION = {
         '!': 0.15,
         '?': 0.25,
@@ -97,7 +98,6 @@ class MarkovChain:
         weightings generated from this block of text
         :return:
         """
-        RE_SANITIZE = r"[^a-zA-Z0-9']*"
         start_words = set() if start_words is None else start_words
         end_words = set() if end_words is None else end_words
         m_chain = {} if m_chain is None else m_chain
@@ -112,7 +112,7 @@ class MarkovChain:
 
         # Have a special class of words: start words, so we can have a
         # better chance of the joke sounding "natural".
-        start_words.add(re.sub(RE_SANITIZE, '', words[0]))
+        start_words.add(re.sub(MarkovChain.SANITIZE_RE, '', words[0]))
 
         # Count all of the words.
         for i in range(0, len(words) - 1):
@@ -120,11 +120,11 @@ class MarkovChain:
             next_word = words[i + 1]
 
             if word[-1] in ['.', '!', '?'] and word != '.':
-                start_words.add(re.sub(RE_SANITIZE, '', next_word))
+                start_words.add(re.sub(MarkovChain.SANITIZE_RE, '', next_word))
 
             # Strip non-alphanumerics.
-            word = re.sub(RE_SANITIZE, '', word)
-            next_word = re.sub(RE_SANITIZE, '', next_word)
+            word = re.sub(MarkovChain.SANITIZE_RE, '', word)
+            next_word = re.sub(MarkovChain.SANITIZE_RE, '', next_word)
 
             if word not in m_chain:
                 m_chain[word] = {
@@ -147,13 +147,13 @@ class MarkovChain:
             m_chain[word]['total_count'] += 1
 
         # Last word in the joke must be an end word.
-        end_words.add(re.sub(RE_SANITIZE, '', words[-1]))
+        end_words.add(re.sub(MarkovChain.SANITIZE_RE, '', words[-1]))
 
         # Find words that end a sentence for the converse reason we track
         # start words.
         for word in words:
             if word[-1] in ['.', '!', '?'] and word != '.':
-                end_words.add(re.sub(RE_SANITIZE, '', word))
+                end_words.add(re.sub(MarkovChain.SANITIZE_RE, '', word))
 
         # Calculate next_words probabilities.
         pm_chain = MarkovChain.recalculate_probabilities(m_chain)
@@ -167,7 +167,7 @@ class MarkovChain:
             start_words = list(m_chain.keys())
 
         word = start_word if start_word else random.choice(list(start_words))
-        length = random.randrange(min_len, max_len)
+        length = max_len if min_len == max_len else random.randrange(min_len, max_len)
 
         new_sentence = [word]
         while len(new_sentence) < length - 1:
@@ -196,8 +196,8 @@ class MarkovChain:
             new_sentence.append(next_word)
             word = next_word
 
-        # Always end with an end word.
-        if new_sentence[-1] not in end_words:
+        # Always end with an end word, if available.
+        if end_words and new_sentence[-1] not in end_words:
             new_sentence.append(random.choice(list(end_words)))
 
         new_sentence[-1] += MarkovChain.get_random_ending_punctuation()
@@ -205,7 +205,7 @@ class MarkovChain:
         return ' '.join(new_sentence)
 
     @staticmethod
-    def apply_fitness(m_chain, f, factor=1, recalculate_probabilities=True):
+    def apply_fitness(m_chain, f, recalculate_probabilities=True):
         """
         Modifies chain in-place for a random pair of generated words.
 
@@ -215,25 +215,18 @@ class MarkovChain:
         :param recalculate_probabilities:
         :return:
         """
-        generated_pair = MarkovChain.generate_sentence(m_chain, max_len=2)
+        generated_pair = MarkovChain.generate_sentence(m_chain, min_len=2, max_len=2)
         print(m_chain)
-        a, b = re.split(r'\s+', generated_pair)
-        print(a,b)
-        choice = f(a, b)
-        if choice not in m_chain[a]['next_words']:
-            m_chain[a]['next_words'][choice] = {
-                'weight': 1 * factor,
-                'prob': None
-            }
-        m_chain[a]['next_words'][choice]['weight'] += factor
-        pairs = [w.lower() for w in MarkovChain.generate_sentence(max_len=2)]
-        pairs = [[pairs[i], None if i == len(pairs) - 1 else pairs[i + 1]] for i
-                 in range(len(pairs))][:-1]
+        print(generated_pair)
+        a, b = re.split(r'\s+', re.sub(MarkovChain.SANITIZE_RE, '', generated_pair))
+        print(a, b)
+        factor = f(a, b)
+        m_chain[a]['next_words'][b]['weight'] *= factor
 
         if recalculate_probabilities:
             for next_word in m_chain[a]['next_words']:
                 m_chain[a]['next_words'][next_word]['prob'] = \
-                    m_chain[a]['next_words'][next_word]['weight'] / len(m_chain[a]['next_words'])
+                    m_chain[a]['next_words'][next_word]['weight'] / m_chain[a]['total_count']
         print(m_chain)
         return m_chain
 
@@ -243,6 +236,6 @@ class MarkovChain:
         for word, metadata in m_chain.items():
             for next_word, count in metadata['next_words'].items():
                 pm_chain[word]['next_words'][next_word]['prob'] = \
-                    pm_chain[word]['next_words'][next_word]['weight'] / len(pm_chain[word]['next_words'])
+                    pm_chain[word]['next_words'][next_word]['weight'] / pm_chain[word]['total_count']
 
         return pm_chain
